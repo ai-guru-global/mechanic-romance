@@ -8,10 +8,13 @@
 
 | 子目录 | 收录内容 | 入口 |
 | --- | --- | --- |
-| `papers/` | 论文笔记（按主题分子目录） | [`papers/README.md`](papers/README.md) |
-| `methods/` | 方法 / 算法梳理（VLA、扩散策略、模仿学习等） | [`methods/README.md`](methods/README.md) |
+| `concepts/` | **基础概念**词典（是什么：具身智能、本体、动作空间…） | [`concepts/README.md`](concepts/README.md) |
+| `methods/` | **方法 / 算法**梳理（怎么做：模仿学习、扩散策略、VLA…） | [`methods/README.md`](methods/README.md) |
 | `datasets/` | 数据集说明（规模、采集、格式、许可） | [`datasets/README.md`](datasets/README.md) |
+| `papers/` | 论文笔记（按主题分子目录） | [`papers/README.md`](papers/README.md) |
 | `surveys/` | 综述 / 行业报告 / 趋势分析 | [`surveys/README.md`](surveys/README.md) |
+
+> **概念 vs 方法**：`concepts/` 收录名词（定义、直觉），`methods/` 收录具体技术（流程、公式）。一个概念可被多种方法实现，一种方法会用多个概念。
 
 ---
 

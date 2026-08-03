@@ -4,11 +4,11 @@
 
 ---
 
-## 建议收录的数据集
+## 数据集索引
 
 | 数据集 | 类型 | 规模 | 状态 |
 | --- | --- | --- | --- |
-| Open-X-Embodiment (OXE) | 跨本体操作 | 100万+ episodes | ⚪ 待写 |
+| [Open-X-Embodiment](open-x-embodiment.md) | 跨本体操作 | 100万+ episodes | 🟢 完成 |
 | DROID | 大规模操作 | 76k trajectories | ⚪ 待写 |
 | BridgeData V2 | 桌面操作 | 60k+ demos | ⚪ 待写 |
 | RH20T | 人-机协作 | 110k+ 接触式交互 | ⚪ 待写 |
