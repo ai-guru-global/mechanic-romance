@@ -4,28 +4,29 @@
 
 ---
 
-## 建议收录
+## 综述索引
 
-- 综述：*A Survey on Vision-Language-Action Models*、*Foundation Models for Robotics* 等。
-- 报告：高校/企业具身智能白皮书、年度回顾。
-- 趋势：顶会（CoRL、RSS、ICRA、IROS）最佳论文梳理。
+| 文献 | 主题 | 状态 |
+| --- | --- | --- |
+| [`2023-firoozi-foundation-models-survey.md`](2023-firoozi-foundation-models-survey.md) | 通用机器人基础模型综述（五支柱分类、数据/泛化/评估挑战） | 🟢 完成 |
+| 综述：Vision-Language-Action 模型 | VLA 专述 | ⚪ 待写 |
+| 综述：Sim-to-Real 迁移 | 仿真到真机方法学 | ⚪ 待写 |
+| 综述：机器人操作学习 | 操作任务方法分类 | ⚪ 待写 |
+| 行业报告：人形机器人白皮书 | 产业全景 | ⚪ 待写 |
+| 顶会年度回顾 | CoRL/RSS/ICRA 最佳论文梳理 | ⚪ 待写 |
 
 ---
 
 ## 文件命名
 
-`年份-作者/来源-关键词.md`，如 `2024-embodied-ai-survey.md`。
+`年份-作者/来源-关键词.md`，如 `2023-firoozi-foundation-models-survey.md`。
 
----
-
-## 笔记结构建议
+## 笔记结构
 
 ```markdown
 # 综述标题（中文 · English）
 
-## 基本信息
-- 来源 / 年份 / 链接
-
+## 基本信息（来源/年份/链接）
 ## 覆盖范围
 ## 关键结论（分点提炼）
 ## 对本课题的启发
