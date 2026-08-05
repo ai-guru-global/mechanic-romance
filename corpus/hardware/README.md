@@ -10,8 +10,9 @@
 | --- | --- | --- |
 | [`arms/`](arms/) | 机械臂本体（Franka / UR / KUKA / xArm 等） | 🟡 充实中 |
 | [`humanoids/`](humanoids/) | 人形机器人（Figure / Tesla Bot / 宇树 H1 / Optimus 等） | 🟡 充实中 |
+| [`hands/`](hands/) | 灵巧手（Allegro / LEAP / Shadow / LEAP Hand） | 🟢 充实中 |
+| [`end-effectors/`](end-effectors/) | 末端执行器（夹爪 / 吸盘 / 柔性手） | 🟡 充实中 |
 | [`quadrupeds/`](quadrupeds/) | 四足机器人（Spot / ANYmal / 宇树 Go2） | ⚪ 待建 |
-| [`end-effectors/`](end-effectors/) | 末端执行器（夹爪 / 灵巧手 / 吸盘 / 柔性手） | ⚪ 待建 |
 | [`sensors/`](sensors/) | 传感器（RGB-D / LiDAR / 触觉 / 力矩 / IMU） | ⚪ 待建 |
 | [`compute/`](compute/) | 计算平台（Jetson / 工作站 GPU / 边缘部署） | ⚪ 待建 |
 

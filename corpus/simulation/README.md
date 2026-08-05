@@ -18,6 +18,7 @@
 | 平台 | 物理引擎 | 渲染 | 并行 | 适用 | 主人 |
 | --- | --- | --- | --- | --- | --- |
 | **Isaac Sim / Lab** | PhysX | RTX 光追 | GPU 数千并行 | 研究主流、RL 大规模 | NVIDIA |
+| **Habitat** | Bullet | OpenGL | 单进程 | 真实室内 3D 场景、导航 / VLN 标配 | Meta AI |
 | **MuJoCo** | MuJoCo | 简易 | CPU | 精确接触、算法原型 | Google DeepMind |
 | **PyBullet** | Bullet | 简易 | CPU | 入门、轻量 | 开源 |
 | **Genesis** | 多引擎 | 光追 | GPU 超大规模 | 2024 新秀、生成式 | CMU/麻省 |
