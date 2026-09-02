@@ -45,3 +45,7 @@ $$
 - [`embodied-ai.md`](embodied-ai.md)（具身智能）
 - [`../mdp/policy.md`](../mdp/policy.md)（策略）
 - [`../mdp/observation-space.md`](../mdp/observation-space.md)（观测空间）
+
+## 参考
+
+- Sutton & Barto《Reinforcement Learning: An Introduction》第 2 版——智能体-环境交互框架（来源：http://incompleteideas.net/book/the-book-2nd.html，访问于 2026-09-02）

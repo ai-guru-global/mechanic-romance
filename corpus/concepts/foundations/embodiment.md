@@ -47,3 +47,8 @@
 ## 代表方法 / 数据
 
 - 跨本体学习：Open-X-Embodiment 数据集 → [`../../datasets/open-x-embodiment.md`](../../datasets/open-x-embodiment.md)
+
+## 参考
+
+- Modern Robotics（Lynch & Park）——机器人本体与运动学结构（来源：http://hades.mech.northwestern.edu/index.php/Modern_Robotics，访问于 2026-09-02）
+- Open X-Embodiment: Robotic Learning Datasets and RT-X Models（2023）——跨本体数据与模型（来源：https://arxiv.org/abs/2310.08864，访问于 2026-09-02）

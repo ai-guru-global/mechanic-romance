@@ -71,7 +71,7 @@ Diffusion Policy 是 2023 年具身操作的里程碑，启发了大量工作：
 
 ## 代表论文
 
-- Chi et al., *Diffusion Policy: Visuomotor Policy Learning via Action Diffusion*, RSS 2023.
+- Chi et al., *Diffusion Policy: Visuomotor Policy Learning via Action Diffusion*, RSS 2023.（论文：https://arxiv.org/abs/2303.04137，项目站：https://diffusion-policy.cs.columbia.edu/，访问于 2026-09-02）
 - Ze et al., *3D Diffusion Policy*, RSS 2024.
 
 ## 相关概念

@@ -69,3 +69,8 @@ VLA 的工程核心是**把连续动作变成 token**，塞进大模型的词表
 - [`imitation-learning.md`](imitation-learning.md)（VLA 本质是 BC 训练）
 - [`../concepts/foundations/embodied-ai.md`](../concepts/foundations/embodied-ai.md)
 - [`../datasets/open-x-embodiment.md`](../datasets/open-x-embodiment.md)（VLA 的数据基石）
+
+## 参考
+
+- RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control（Google DeepMind 2023）（来源：https://arxiv.org/abs/2307.15818，访问于 2026-09-02）
+- OpenVLA: An Open-Source Vision-Language-Action Model（Stanford 2024）（来源：https://arxiv.org/abs/2406.09246，访问于 2026-09-02）

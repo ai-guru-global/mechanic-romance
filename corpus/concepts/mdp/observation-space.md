@@ -44,3 +44,7 @@
 - [`action-space.md`](action-space.md)（动作空间）
 - [`policy.md`](policy.md)（策略，吃观测输出动作）
 - [`../foundations/embodiment.md`](../foundations/embodiment.md)（本体决定传感器配置）
+
+## 参考
+
+- Sutton & Barto《Reinforcement Learning: An Introduction》第 2 版——状态、观测与部分可观测性的经典论述（来源：http://incompleteideas.net/book/the-book-2nd.html，访问于 2026-09-02）

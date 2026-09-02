@@ -187,7 +187,7 @@ model.learn(total_timesteps=10_000_000)
 
 ## 参考论文
 
-- **Schulman et al. 2017** — *Proximal Policy Optimization Algorithms*（arXiv）
+- **Schulman et al. 2017** — *Proximal Policy Optimization Algorithms*（arXiv）（来源：https://arxiv.org/abs/1707.06347，访问于 2026-09-02）
 - **Schulman et al. 2015** — *Trust Region Policy Optimization*（TRPO，PPO 前身）
 - **Mnih et al. 2016** — *Asynchronous Methods for Deep Reinforcement Learning*（A3C）
 - **Engstrom et al. 2020** — *Implementation Matters in Deep RL: A Case Study on PPO and TRPO*

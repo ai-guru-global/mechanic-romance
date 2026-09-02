@@ -190,7 +190,7 @@ model.learn(total_timesteps=1_000_000)
 
 ## 参考论文
 
-- **Haarnoja et al. 2018** — *Soft Actor-Critic: Off-Policy Maximum Entropy Deep Reinforcement Learning with a Stochastic Actor*（ICML 2018）
+- **Haarnoja et al. 2018** — *Soft Actor-Critic: Off-Policy Maximum Entropy Deep Reinforcement Learning with a Stochastic Actor*（ICML 2018）（来源：https://arxiv.org/abs/1801.01290，访问于 2026-09-02）
 - **Haarnoja et al. 2018 v2** — *Soft Actor-Critic Algorithms and Applications*（自动 alpha）
 - **Fujimoto et al. 2018** — *Addressing Function Approximation Error in Actor-Critic Methods*（TD3）
 - **Laskin et al. 2020** — *Reinforcement Learning with Augmented Data*（RAD，视觉 SAC）

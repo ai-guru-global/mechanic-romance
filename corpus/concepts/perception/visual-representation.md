@@ -164,3 +164,4 @@ $$
 - 方法目录：[`../../methods/`](../../methods/)
 - 数据集（视觉策略训练数据）：[`../../datasets/open-x-embodiment.md`](../../datasets/open-x-embodiment.md)
 - 综述：*A Survey on Visual Representations for Robot Manipulation* (2024)
+- R3M（Nair et al. 2022）——机器人操作的视觉表征预训练（来源：https://arxiv.org/abs/2203.12601，访问于 2026-09-02）

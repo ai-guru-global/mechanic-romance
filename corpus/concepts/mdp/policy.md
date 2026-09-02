@@ -57,3 +57,7 @@ $$
 - [`observation-space.md`](observation-space.md)（输入）
 - [`action-space.md`](action-space.md)（输出）
 - [`reward-function.md`](reward-function.md)（强化学习中评估策略好坏）
+
+## 参考
+
+- Sutton & Barto《Reinforcement Learning: An Introduction》第 2 版——策略的定义与表示（来源：http://incompleteideas.net/book/the-book-2nd.html，访问于 2026-09-02）

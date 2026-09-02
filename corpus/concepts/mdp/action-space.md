@@ -50,3 +50,7 @@
 - [`observation-space.md`](observation-space.md)（观测空间）
 - [`policy.md`](policy.md)（策略）
 - [`../foundations/embodiment.md`](../foundations/embodiment.md)（本体决定动作空间）
+
+## 参考
+
+- Modern Robotics（Lynch & Park）——关节空间、任务空间与自由度（来源：http://hades.mech.northwestern.edu/index.php/Modern_Robotics，访问于 2026-09-02）

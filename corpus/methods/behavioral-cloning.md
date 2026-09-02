@@ -56,3 +56,8 @@ $$
 - [`imitation-learning.md`](imitation-learning.md)（BC 的上位概念）
 - [`diffusion-policy.md`](diffusion-policy.md)（解决 BC 多模态问题）
 - [`../concepts/mdp/policy.md`](../concepts/mdp/policy.md)
+
+## 参考
+
+- ALVINN: An Autonomous Land Vehicle in a Neural Network（Pomerleau 1988）——行为克隆的最早实践（来源：https://proceedings.neurips.cc/paper_files/paper/1988/hash/812b4ba287f5ee0bc9d43bbf5bbe87fb-Abstract.html，访问于 2026-09-02）
+- ACT: Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware（Zhao et al. 2023）——现代 BC 代表工作（来源：https://arxiv.org/abs/2304.13705，访问于 2026-09-02）

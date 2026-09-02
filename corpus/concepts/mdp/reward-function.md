@@ -52,3 +52,7 @@ $$
 
 - [`policy.md`](policy.md)（策略，被奖励评估）
 - [`../../methods/reinforcement-learning.md`](../../methods/reinforcement-learning.md)（强化学习，奖励驱动）
+
+## 参考
+
+- Sutton & Barto《Reinforcement Learning: An Introduction》第 2 版——奖励假设与奖励塑造（来源：http://incompleteideas.net/book/the-book-2nd.html，访问于 2026-09-02）

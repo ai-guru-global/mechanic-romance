@@ -61,3 +61,8 @@ $$
 - [`../concepts/mdp/reward-function.md`](../concepts/mdp/reward-function.md)
 - [`../concepts/mdp/policy.md`](../concepts/mdp/policy.md)
 - [`imitation-learning.md`](imitation-learning.md)
+
+## 参考
+
+- Sutton & Barto《Reinforcement Learning: An Introduction》第 2 版——强化学习与马尔可夫决策过程的经典教材，全文免费在线（来源：http://incompleteideas.net/book/the-book-2nd.html，访问于 2026-09-02）
+- OpenAI Spinning Up in Deep RL——RL 入门教程与参考实现（来源：https://spinningup.openai.com/en/latest/，访问于 2026-09-02）

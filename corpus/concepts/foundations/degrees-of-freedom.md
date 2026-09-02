@@ -43,3 +43,7 @@ $$
 - [`embodiment.md`](embodiment.md)（本体）
 - [`../mdp/action-space.md`](../mdp/action-space.md)（动作空间）
 - 逆运动学（IK）：从末端位姿反解关节角——见 [`../perception/`](../perception/) 待补
+
+## 参考
+
+- Modern Robotics（Lynch & Park）——自由度与构型空间（来源：http://hades.mech.northwestern.edu/index.php/Modern_Robotics，访问于 2026-09-02）

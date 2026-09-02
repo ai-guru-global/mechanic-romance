@@ -55,3 +55,8 @@
 
 - [视觉-语言-动作模型](../../methods/vision-language-action.md)
 - 综述：*Foundation Models for Robotics*（见 [`../surveys/`](../../surveys/)）
+
+## 参考
+
+- RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control（Google DeepMind 2023）——具身大模型代表作（来源：https://arxiv.org/abs/2307.15818，访问于 2026-09-02）
+- Open X-Embodiment: Robotic Learning Datasets and RT-X Models（2023）——大规模跨本体机器人学习（来源：https://arxiv.org/abs/2310.08864，访问于 2026-09-02）

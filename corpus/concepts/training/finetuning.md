@@ -174,3 +174,4 @@ $$
 - 训练目录总览：[`./README.md`](README.md)
 - 方法目录：[`../../methods/`](../../methods/)
 - 综述：*Fine-tuning Large Vision-Language Models for Robotics* (2024)
+- LoRA（Hu et al. 2021）——低秩适配微调的代表方法（来源：https://arxiv.org/abs/2106.09685，访问于 2026-09-02）

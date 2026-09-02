@@ -52,3 +52,8 @@ BC 训练时策略看到的是**专家轨迹上的观测**，但测试时策略�
 - [`behavioral-cloning.md`](behavioral-cloning.md)
 - [`../concepts/mdp/policy.md`](../concepts/mdp/policy.md)
 - [`reinforcement-learning.md`](reinforcement-learning.md)
+
+## 参考
+
+- ALVINN（Pomerleau 1988）——模仿学习最早的端到端驾驶系统（来源：https://proceedings.neurips.cc/paper_files/paper/1988/hash/812b4ba287f5ee0bc9d43bbf5bbe87fb-Abstract.html，访问于 2026-09-02）
+- An Algorithmic Perspective on Imitation Learning（arXiv 2018，模仿学习综述）（来源：https://arxiv.org/abs/1811.06711，访问于 2026-09-02）
