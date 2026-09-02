@@ -104,7 +104,7 @@ Gym 风格环境封装，提供标准任务集：
 
 ## 5. 在 VLN 与导航里的典型用法
 
-### 5.1 VLN-CE 任务设置（[demo 07 引用](../../demo/scenarios/07-视觉语言导航-VLN-CE/README.md)）
+### 5.1 VLN-CE 任务设置（[demo 07 引用](../../../demo/scenarios/07-视觉语言导航-VLN-CE/README.md)）
 
 ```python
 import habitat
@@ -218,4 +218,4 @@ config.sim_config.agent.sensor_specifications = [rgb_spec, depth_spec, wrist_rgb
 - [`../../concepts/mdp/action-space.md`](../../concepts/mdp/action-space.md) — 底盘连续 / 离散动作
 - [`../../methods/vision-language-navigation.md`](../../methods/vision-language-navigation.md) — Habitat 上的主流方法族
 - [`../../methods/vision-language-action.md`](../../methods/vision-language-action.md) — VLA 是 Habitat 的姊妹（导航 vs 操作）
-- [demo 07-视觉语言导航-VLN-CE](../../demo/scenarios/07-视觉语言导航-VLN-CE/README.md) — 直接落地场景
+- [demo 07-视觉语言导航-VLN-CE](../../../demo/scenarios/07-视觉语言导航-VLN-CE/README.md) — 直接落地场景

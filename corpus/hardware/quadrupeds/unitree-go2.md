@@ -203,7 +203,7 @@ $30k     $20k     $8.5k    $1.6k
 ## 10. 相关笔记
 
 - 同类：[boston-dynamics-spot.md](boston-dynamics-spot.md)
-- 行业：[../../industry/humanoid-china/unitree.md](../../../../industry/humanoid-china/unitree.md)
+- 行业：[../../industry/humanoid-china/unitree.md](../../industry/humanoid-china/unitree.md)
 - 硬件：[../compute/nvidia-jetson-orin.md](../compute/nvidia-jetson-orin.md) · [../sensors/intel-realsense-d435.md](../sensors/intel-realsense-d435.md)
 - 仿真：[../../simulation/platforms/nvidia-isaac.md](../../simulation/platforms/nvidia-isaac.md)
 - 方法：[../../methods/reinforcement-learning.md](../../methods/reinforcement-learning.md) · [../../methods/ppo.md](../../methods/ppo.md)

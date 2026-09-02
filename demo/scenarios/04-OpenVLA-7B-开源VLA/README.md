@@ -8,7 +8,7 @@
 | 创建日期 | 2026-08-04 |
 | 状态 | 🟡 设计中 |
 | 负责人 | 待认领 |
-| 关联课题 | [roadmap M3 · 实验复现](../../docs/roadmap.md) |
+| 关联课题 | [roadmap M3 · 实验复现](../../../docs/roadmap.md) |
 
 ---
 
@@ -62,12 +62,12 @@
 
 | 项目 | 规格 |
 | --- | --- |
-| 机械臂 | [Franka Panda](../../corpus/hardware/arms/franka-panda.md) 或 WidowX 250（论文方案） |
+| 机械臂 | [Franka Panda](../../../corpus/hardware/arms/franka-panda.md) 或 WidowX 250（论文方案） |
 | 末端执行器 | 平行夹爪 |
 | 相机 | 单目 RGB（Intel RealSense） |
 | 计算 | **1× A100 80GB**（LoRA 微调）/ 4090 24GB（推理可） |
-| 仿真器 | [LIBERO](../../corpus/benchmarks/manipulation/libero.md)（前置仿真验证） |
-| 数据集 | [Open X-Embodiment](../../corpus/datasets/open-x-embodiment.md) + BridgeData V2 |
+| 仿真器 | [LIBERO](../../../corpus/benchmarks/manipulation/libero.md)（前置仿真验证） |
+| 数据集 | [Open X-Embodiment](../../../corpus/datasets/open-x-embodiment.md) + BridgeData V2 |
 
 ---
 
@@ -76,7 +76,7 @@
 - 策略：**OpenVLA-7B = Prismatic VLM (SigLIP + Llama 2 7B) + 动作头**
 - 预训练：970K 演示 episode（Open X-Embodiment）
 - 微调：LoRA（rank 32） 在 BridgeData V2 上
-- 论文笔记：[2024-kim-openvla](../../corpus/papers/vla/2024-kim-openvla.md)
+- 论文笔记：[2024-kim-openvla](../../../corpus/papers/vla/2024-kim-openvla.md)
 
 **为什么是它**：
 1. **开源 + 权重可下载**（HF Hub，7B/13B 两档）
@@ -121,7 +121,7 @@ python experiments/robot/libero/run_libero_eval.py \
 
 ## 8. 结果与记录（Results）
 
-> 跑通后补充。计划在 [research/experiments/](../../research/experiments/) 下建 `2026-XX-XX-openvla-bridge/` 实验记录。
+> 跑通后补充。计划在 [research/experiments/](../../../research/experiments/) 下建 `2026-XX-XX-openvla-bridge/` 实验记录。
 
 - 首次成功演示：待定
 - 复现指标：BridgeV2 78.3% / SimplerEnv 47.7%（参考论文）
@@ -130,11 +130,11 @@ python experiments/robot/libero/run_libero_eval.py \
 
 ## 9. 相关语料（References）
 
-- 论文：[2024-kim-openvla](../../corpus/papers/vla/2024-kim-openvla.md)
-- 方法：[vision-language-action](../../corpus/methods/vision-language-action.md)
-- 数据集：[open-x-embodiment](../../corpus/datasets/open-x-embodiment.md)
-- 评测：[libero](../../corpus/benchmarks/manipulation/libero.md)
-- 概念：[embodied-ai](../../corpus/concepts/foundations/embodied-ai.md) · [finetuning](../../corpus/concepts/training/finetuning.md)
+- 论文：[2024-kim-openvla](../../../corpus/papers/vla/2024-kim-openvla.md)
+- 方法：[vision-language-action](../../../corpus/methods/vision-language-action.md)
+- 数据集：[open-x-embodiment](../../../corpus/datasets/open-x-embodiment.md)
+- 评测：[libero](../../../corpus/benchmarks/manipulation/libero.md)
+- 概念：[embodied-ai](../../../corpus/concepts/foundations/embodied-ai.md) · [finetuning](../../../corpus/concepts/training/finetuning.md)
 
 ---
 
@@ -146,7 +146,7 @@ python experiments/robot/libero/run_libero_eval.py \
   - **vs Octo（27M）**：OpenVLA 更通用、零样本更强
   - **vs π0（3B）**：OpenVLA 公开权重最完整
 - **可扩展方向**：
-  - 在 [Behavior-1k](../../corpus/benchmarks/manipulation/behavior-1k.md) 上测
+  - 在 [Behavior-1k](../../../corpus/benchmarks/manipulation/behavior-1k.md) 上测
   - 换 Llama 2 → Llama 3 backbone
 - **已知坑**：
   - 显存峰值 22-24 GB（A100），4090 推理可行但微调需开启 gradient checkpointing

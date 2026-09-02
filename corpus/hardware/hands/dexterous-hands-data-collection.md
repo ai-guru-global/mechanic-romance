@@ -135,7 +135,7 @@
 - 10 任务 / 50 演示 / 90% 成功率（in-hand rotation 等）
 - 用 1/10 数据超过纯遥操作
 
-**代表引用**：[demo 08](../../demo/scenarios/08-灵巧手-五指旋转立方体/README.md) 灵巧手任务
+**代表引用**：[demo 08](../../../demo/scenarios/08-灵巧手-五指旋转立方体/README.md) 灵巧手任务
 
 ### 3.2 ALOHA / Mobile ALOHA（Stanford 2023-2024）
 
@@ -148,7 +148,7 @@
 4. ACT 直接迁移到真机
 
 **成果**：
-- **50 演示学会叠毛巾**（[demo 02](../../demo/scenarios/02-ACT-双手叠衣/README.md)）
+- **50 演示学会叠毛巾**（[demo 02](../../../demo/scenarios/02-ACT-双手叠衣/README.md)）
 - Mobile ALOHA：5-50 演示学会复杂厨房任务
 
 **硬件**：
@@ -298,7 +298,7 @@ reward = -slip_prob  # 越少滑越好
 - 专题：[全景](dexterous-hands-landscape.md) · [控制](dexterous-hands-control.md) · [Sim-to-Real](dexterous-hands-sim2real.md) · [算法](dexterous-hands-algorithms.md)
 - 方法：[imitation-learning](../../methods/imitation-learning.md) · [behavioral-cloning](../../methods/behavioral-cloning.md) · [dagger](../../methods/dagger.md) · [act](../../methods/act.md) · [diffusion-policy](../../methods/diffusion-policy.md)
 - 触觉：[digit-tactile.md](../sensors/digit-tactile.md)
-- Demo：[02-ACT-双手叠衣](../../demo/scenarios/02-ACT-双手叠衣/README.md) · [08-灵巧手-五指旋转立方体](../../demo/scenarios/08-灵巧手-五指旋转立方体/README.md)
+- Demo：[02-ACT-双手叠衣](../../../demo/scenarios/02-ACT-双手叠衣/README.md) · [08-灵巧手-五指旋转立方体](../../../demo/scenarios/08-灵巧手-五指旋转立方体/README.md)
 
 ## 8. 参考
 

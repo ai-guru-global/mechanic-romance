@@ -8,13 +8,13 @@
 | 创建日期 | 2026-08-04 |
 | 状态 | 🟡 设计中 |
 | 负责人 | 待认领 |
-| 关联课题 | [roadmap M1 · 语料沉淀](../../docs/roadmap.md) |
+| 关联课题 | [roadmap M1 · 语料沉淀](../../../docs/roadmap.md) |
 
 ---
 
 ## 1. 任务目标（Task）
 
-[Figure 02](../../corpus/hardware/humanoids/figure-02.md) 站在厨房区域，接收语音指令 **"给我从冰箱拿一瓶可乐"**，自主完成：
+[Figure 02](../../../corpus/hardware/humanoids/figure-02.md) 站在厨房区域，接收语音指令 **"给我从冰箱拿一瓶可乐"**，自主完成：
 1. 导航到冰箱
 2. 打开冰箱门（双指夹爪拉把手）
 3. 识别可乐瓶
@@ -72,7 +72,7 @@
 
 | 项目 | 规格 |
 | --- | --- |
-| 机器人 | **[Figure 02](../../corpus/hardware/humanoids/figure-02.md)**（双足 humanoid，35-DoF） |
+| 机器人 | **[Figure 02](../../../corpus/hardware/humanoids/figure-02.md)**（双足 humanoid，35-DoF） |
 | 灵巧手 | 第四代 5 指灵巧手（16-DoF × 2） |
 | 头部 | 6 摄像头（双目 RGB + 红外 + 结构光） |
 | 计算 | **机载 GPU**（Figure 自研 SoC，疑似 NVIDIA Orin + 自定义 FPGA） |
@@ -87,7 +87,7 @@
 - System 2 负责：「听懂指令 → 拆解为子任务 → 决定策略」
 - System 1 负责：「图像 → 关节动作」的快速反应
 - 训练数据：Figure 内部数据 + 互联网 VLM 知识
-- 论文笔记：[industry/figure-ai](../../corpus/industry/humanoid-overseas/figure-ai.md) + Helix 技术博客（2025-02 发布）
+- 论文笔记：[industry/figure-ai](../../../corpus/industry/humanoid-overseas/figure-ai.md) + Helix 技术博客（2025-02 发布）
 
 **为什么是它**：
 1. **首个公开的"端到端 VLA + 人形"商用方案**（2025-02 Helix 发布）
@@ -103,7 +103,7 @@
 # 1. 看 Helix 官方视频与技术博客
 #    https://www.figure.ai/blog/helix
 
-# 2. 在 [industry/figure-ai](../../corpus/industry/humanoid-overseas/figure-ai.md) 笔记中整理思路
+# 2. 在 [industry/figure-ai](../../../corpus/industry/humanoid-overseas/figure-ai.md) 笔记中整理思路
 
 # 3. 对照开源方案
 #    - 思路：参考 [03-RT2](../03-RT2-自然语言指令分拣/README.md) + [04-OpenVLA-7B](../04-OpenVLA-7B-开源VLA/README.md)
@@ -111,9 +111,9 @@
 #    - 灵巧手：参考 [ALOHA + ACT](../02-ACT-双手叠衣/README.md) 改装
 
 # 4. 在仿真中尝试"双系统 VLA"思路
-#    - System 1: 训练 [Diffusion Policy](../../corpus/methods/diffusion-policy.md) 做单步反应
+#    - System 1: 训练 [Diffusion Policy](../../../corpus/methods/diffusion-policy.md) 做单步反应
 #    - System 2: 用 LLM 拆解指令为子任务
-#    - 用 [Genesis](../../corpus/simulation/platforms/genesis.md) 跑家庭场景
+#    - 用 [Genesis](../../../corpus/simulation/platforms/genesis.md) 跑家庭场景
 ```
 
 - 关键脚本：无（商用）
@@ -123,7 +123,7 @@
 
 ## 8. 结果与记录（Results）
 
-> 跑通后补充。计划在 [research/experiments/](../../research/experiments/) 下建 `2026-XX-XX-figure02-helix-analysis/` 复盘报告。
+> 跑通后补充。计划在 [research/experiments/](../../../research/experiments/) 下建 `2026-XX-XX-figure02-helix-analysis/` 复盘报告。
 
 - 首次成功演示：商用层面已达成（Figure 官方视频）
 - 个人复现：N/A（硬件门槛）
@@ -132,11 +132,11 @@
 
 ## 9. 相关语料（References）
 
-- 硬件：[figure-02](../../corpus/hardware/humanoids/figure-02.md)
-- 行业：[figure-ai](../../corpus/industry/humanoid-overseas/figure-ai.md) · [tesla-optimus](../../corpus/industry/humanoid-overseas/tesla-optimus.md) · [physical-intelligence](../../corpus/industry/foundation-models/physical-intelligence.md)
-- 概念：[embodied-ai](../../corpus/concepts/foundations/embodied-ai.md) · [embodiment](../../corpus/concepts/foundations/embodiment.md) · [degrees-of-freedom](../../corpus/concepts/foundations/degrees-of-freedom.md)
-- 方法对照：[vision-language-action](../../corpus/methods/vision-language-action.md)
-- 评测：[real-world-eval](../../corpus/benchmarks/vla-eval/real-world-eval.md)
+- 硬件：[figure-02](../../../corpus/hardware/humanoids/figure-02.md)
+- 行业：[figure-ai](../../../corpus/industry/humanoid-overseas/figure-ai.md) · [tesla-optimus](../../../corpus/industry/humanoid-overseas/tesla-optimus.md) · [physical-intelligence](../../../corpus/industry/foundation-models/physical-intelligence.md)
+- 概念：[embodied-ai](../../../corpus/concepts/foundations/embodied-ai.md) · [embodiment](../../../corpus/concepts/foundations/embodiment.md) · [degrees-of-freedom](../../../corpus/concepts/foundations/degrees-of-freedom.md)
+- 方法对照：[vision-language-action](../../../corpus/methods/vision-language-action.md)
+- 评测：[real-world-eval](../../../corpus/benchmarks/vla-eval/real-world-eval.md)
 
 ---
 
@@ -148,7 +148,7 @@
   - 演讲 / 教学 / 客户演示 都好用
 - **学习路径**：
   1. 先看 Helix 官方视频
-  2. 再看 [figure-ai](../../corpus/industry/humanoid-overseas/figure-ai.md) 笔记
+  2. 再看 [figure-ai](../../../corpus/industry/humanoid-overseas/figure-ai.md) 笔记
   3. 对照 [03-RT2](../03-RT2-自然语言指令分拣/README.md) 学 VLA 原理
   4. 对照 [04-OpenVLA-7B](../04-OpenVLA-7B-开源VLA/README.md) 学开源复现
   5. 未来：等 Helix 出技术细节，写到 `corpus/methods/`
@@ -157,4 +157,4 @@
   - **1X Neo + Redwood**：纯端到端 VLA 路线（无 System 2 拆解）
   - **Tesla Optimus + FSD**：自动驾驶技术迁移路线
   - **Unitree H1 + 智元 A2**：硬件优先 + 学术合作路线
-- **个人复现建议**：用 [Isaac Sim](../../corpus/simulation/platforms/nvidia-isaac.md) + [Genesis](../../corpus/simulation/platforms/genesis.md) 在仿真里跑简化版（无灵巧手 → 平行夹爪）。
+- **个人复现建议**：用 [Isaac Sim](../../../corpus/simulation/platforms/nvidia-isaac.md) + [Genesis](../../../corpus/simulation/platforms/genesis.md) 在仿真里跑简化版（无灵巧手 → 平行夹爪）。

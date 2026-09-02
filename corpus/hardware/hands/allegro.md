@@ -56,7 +56,7 @@ Allegro 是**4 指设计**（无小指），这与 Shadow Hand 的 5 指不同�
 | 仿真难度 | 中 | 高 |
 | 适用任务 | in-hand rotation、pinch、envelop | 复杂 dexterous tool use |
 
-> 4 指在 in-hand rotation（[demo 08 引用](../../demo/scenarios/08-灵巧手-五指旋转立方体/README.md)）等任务上**与 5 指差距小**，但样本效率**高 30-50%**。
+> 4 指在 in-hand rotation（[demo 08 引用](../../../demo/scenarios/08-灵巧手-五指旋转立方体/README.md)）等任务上**与 5 指差距小**，但样本效率**高 30-50%**。
 
 ### 3.2 关节联动（coupled joints）
 
@@ -224,7 +224,7 @@ for t in range(200):
 - [`../../concepts/foundations/sim-to-real.md`](../../concepts/foundations/sim-to-real.md) — Allegro sim-to-real
 - [`../../simulation/platforms/nvidia-isaac.md`](../../simulation/platforms/nvidia-isaac.md) — Isaac Lab 训练
 - [`../../simulation/sim-to-real/domain-randomization.md`](../../simulation/sim-to-real/domain-randomization.md) — 灵巧手 sim-to-real 关键
-- [demo 08-灵巧手-五指旋转立方体](../../demo/scenarios/08-灵巧手-五指旋转立方体/README.md) — 直接落地场景
+- [demo 08-灵巧手-五指旋转立方体](../../../demo/scenarios/08-灵巧手-五指旋转立方体/README.md) — 直接落地场景
 
 ---
 

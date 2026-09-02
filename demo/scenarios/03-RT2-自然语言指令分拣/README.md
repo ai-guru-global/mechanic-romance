@@ -8,7 +8,7 @@
 | 创建日期 | 2026-08-04 |
 | 状态 | 🟡 设计中 |
 | 负责人 | 待认领 |
-| 关联课题 | [roadmap M1 · 语料沉淀](../../docs/roadmap.md) |
+| 关联课题 | [roadmap M1 · 语料沉淀](../../../docs/roadmap.md) |
 
 ---
 
@@ -43,7 +43,7 @@
 - **控制频率**：3 Hz（受限于 VLM 推理速度）
 - **动作表示**：**绝对位姿 token**（与 RT-1 一致）
 
-> 这是 RT-2 与 [Diffusion Policy](../../corpus/methods/diffusion-policy.md) 的核心区别：离散 vs 连续、单步 vs 多步。
+> 这是 RT-2 与 [Diffusion Policy](../../../corpus/methods/diffusion-policy.md) 的核心区别：离散 vs 连续、单步 vs 多步。
 
 ---
 
@@ -73,7 +73,7 @@
 | 相机 | 单目 RGB |
 | 计算 | **TPU v4**（训练，32+ pod）/ **TPU v5e**（推理）或 H100 |
 | 仿真器 | **无原生仿真**（RT-2 主要真机） |
-| 数据来源 | [Open X-Embodiment](../../corpus/datasets/open-x-embodiment.md) RT-1 数据集（13 万 episode） |
+| 数据来源 | [Open X-Embodiment](../../../corpus/datasets/open-x-embodiment.md) RT-1 数据集（13 万 episode） |
 
 > ⚠️ **本场景重在"复现思路"而非真跑 RT-2**。完整 RT-2 训练需 14+ 天 × 32 TPU pod。复现建议用 [OpenVLA-7B](../04-OpenVLA-7B-开源VLA/README.md) 替代。
 
@@ -84,7 +84,7 @@
 - 策略：**RT-2 = PaLI-X (55B VLM) + 动作头**，联合微调
 - 预训练：PaLI-X 已在视觉-语言数据上预训练
 - 训练数据：RT-1 演示数据 + 互联网视觉-语言数据
-- 论文笔记：[2023-brohan-rt2](../../corpus/papers/vla/2023-brohan-rt2.md)
+- 论文笔记：[2023-brohan-rt2](../../../corpus/papers/vla/2023-brohan-rt2.md)
 
 **为什么是它**：VLA 范式的**开山之作**（2023 年 7 月），首次把机器人动作当作"语言"处理，泛化能力跃迁。
 
@@ -114,7 +114,7 @@ python inference.py --model rt2_55b --ckpt gs://rt2-weights
 
 ## 8. 结果与记录（Results）
 
-> 跑通后补充。计划在 [research/experiments/](../../research/experiments/) 下建 `2026-XX-XX-rt2-concepts/` 笔记。
+> 跑通后补充。计划在 [research/experiments/](../../../research/experiments/) 下建 `2026-XX-XX-rt2-concepts/` 笔记。
 
 - 首次成功演示：待定
 - 复现指标：定性看「新指令泛化」即可，不强求复现 62%
@@ -123,11 +123,11 @@ python inference.py --model rt2_55b --ckpt gs://rt2-weights
 
 ## 9. 相关语料（References）
 
-- 论文：[2023-brohan-rt2](../../corpus/papers/vla/2023-brohan-rt2.md)
-- 方法：[vision-language-action](../../corpus/methods/vision-language-action.md)
-- 数据集：[open-x-embodiment](../../corpus/datasets/open-x-embodiment.md)
-- 评测：[real-world-eval](../../corpus/benchmarks/vla-eval/real-world-eval.md)
-- 概念：[embodied-ai](../../corpus/concepts/foundations/embodied-ai.md) · [embodiment](../../corpus/concepts/foundations/embodiment.md)
+- 论文：[2023-brohan-rt2](../../../corpus/papers/vla/2023-brohan-rt2.md)
+- 方法：[vision-language-action](../../../corpus/methods/vision-language-action.md)
+- 数据集：[open-x-embodiment](../../../corpus/datasets/open-x-embodiment.md)
+- 评测：[real-world-eval](../../../corpus/benchmarks/vla-eval/real-world-eval.md)
+- 概念：[embodied-ai](../../../corpus/concepts/foundations/embodied-ai.md) · [embodiment](../../../corpus/concepts/foundations/embodiment.md)
 
 ---
 
@@ -141,4 +141,4 @@ python inference.py --model rt2_55b --ckpt gs://rt2-weights
   - RT-X / RT-H（2024）→ 跨机器人数据混合
   - OpenVLA（2024）→ 开源 7B 复现
   - π0 / π0.5（2024-2025）→ 通用机器人基础模型
-- **学习建议**：先精读论文 [2023-brohan-rt2](../../corpus/papers/vla/2023-brohan-rt2.md) 笔记，再看 [OpenVLA](../04-OpenVLA-7B-开源VLA/README.md) 的开源复现。
+- **学习建议**：先精读论文 [2023-brohan-rt2](../../../corpus/papers/vla/2023-brohan-rt2.md) 笔记，再看 [OpenVLA](../04-OpenVLA-7B-开源VLA/README.md) 的开源复现。

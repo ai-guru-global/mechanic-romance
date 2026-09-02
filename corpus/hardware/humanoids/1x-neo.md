@@ -182,7 +182,7 @@ B2C 家庭服务机器人
 - 行业：[../../industry/humanoid-overseas/figure-ai.md](../../industry/humanoid-overseas/figure-ai.md)
 - 灵巧手：[../hands/dexterous-hands-landscape.md](../hands/dexterous-hands-landscape.md)
 - 方法：[../../methods/vision-language-action.md](../../methods/vision-language-action.md)
-- Demo：[05-Figure02-端到端人形](../demo/scenarios/05-Figure02-端到端人形/README.md)
+- Demo：[05-Figure02-端到端人形](../../../demo/scenarios/05-Figure02-端到端人形/README.md)
 
 ## 11. 参考
 

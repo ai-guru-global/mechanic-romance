@@ -1,6 +1,6 @@
 # 视觉语言导航·VLN-CE · Vision-and-Language Navigation in Continuous Environments
 
-> **一句话描述**：机器人在 3D 室内仿真环境（[Habitat](../../corpus/simulation/platforms/mujoco.md) Matterport3D）中，按自然语言指令（如"走到厨房的冰箱前"）**连续空间**导航到目标位置——视觉语言导航的 SOTA 基准。
+> **一句话描述**：机器人在 3D 室内仿真环境（[Habitat](../../../corpus/simulation/platforms/mujoco.md) Matterport3D）中，按自然语言指令（如"走到厨房的冰箱前"）**连续空间**导航到目标位置——视觉语言导航的 SOTA 基准。
 
 | 字段 | 内容 |
 | --- | --- |
@@ -8,7 +8,7 @@
 | 创建日期 | 2026-08-04 |
 | 状态 | 🟡 设计中 |
 | 负责人 | 待认领 |
-| 关联课题 | [roadmap M1 · 语料沉淀](../../docs/roadmap.md) |
+| 关联课题 | [roadmap M1 · 语料沉淀](../../../docs/roadmap.md) |
 
 ---
 
@@ -32,7 +32,7 @@
 | 文本指令 | 文字输入 | 经 CLIP / BERT 编码 |
 | 本体感知 | 底盘里程计 | 位置 (x,y,z) + 朝向 (yaw) + 速度 |
 
-> 概念见 [observation-space](../../corpus/concepts/mdp/observation-space.md)。**关键差异**：导航任务**不关心操作**（没有夹爪），但极度依赖**长程记忆**和**语言-视觉对齐**。
+> 概念见 [observation-space](../../../corpus/concepts/mdp/observation-space.md)。**关键差异**：导航任务**不关心操作**（没有夹爪），但极度依赖**长程记忆**和**语言-视觉对齐**。
 
 ---
 
@@ -43,7 +43,7 @@
 - **控制频率**：10 Hz
 - **动作表示**：连续值 + 离散 STOP
 
-> 详见 [action-space](../../corpus/concepts/mdp/action-space.md)。
+> 详见 [action-space](../../../corpus/concepts/mdp/action-space.md)。
 
 ---
 
@@ -73,11 +73,11 @@
 | 机器人 | 仿真 LoCoBot（底盘 + RGBD） / 真机 LoCoBot / Stretch |
 | 相机 | 第一人称 RGB + 深度（RealSense D435） |
 | 计算 | 1× RTX 3090（仿真 + 训练）/ Jetson AGX（真机部署） |
-| 仿真器 | **Habitat-Sim**（基于 [BulletPhysics](../../corpus/simulation/platforms/pybullet.md) + 渲染） |
+| 仿真器 | **Habitat-Sim**（基于 [BulletPhysics](../../../corpus/simulation/platforms/pybullet.md) + 渲染） |
 | 数据集 | **R2R-CE**（Matterport3D 室内 + 人类指令） |
 | 真机 | LoCoBot（iRobot Create + Kobuki 底盘）/ Hello Robot Stretch |
 
-> 仿真器见 [habitat](../../corpus/simulation/platforms/habitat.md)。
+> 仿真器见 [habitat](../../../corpus/simulation/platforms/habitat.md)。
 
 ---
 
@@ -132,7 +132,7 @@ python eval.py --split test --checkpoint ckpt/hamt_r2r_ce.pth
 
 ## 8. 结果与记录（Results）
 
-> 跑通后补充。计划在 [research/experiments/](../../research/experiments/) 下建 `2026-XX-XX-vln-ce-hamt/` 实验记录。
+> 跑通后补充。计划在 [research/experiments/](../../../research/experiments/) 下建 `2026-XX-XX-vln-ce-hamt/` 实验记录。
 
 - 首次成功演示：待定
 - 复现指标：HAMT R2R-CE SR 55% / SPL 51%（参考论文）
@@ -141,10 +141,10 @@ python eval.py --split test --checkpoint ckpt/hamt_r2r_ce.pth
 
 ## 9. 相关语料（References）
 
-- 概念：[embodied-ai](../../corpus/concepts/foundations/embodied-ai.md) · [embodiment](../../corpus/concepts/foundations/embodiment.md) · [observation-space](../../corpus/concepts/mdp/observation-space.md) · [action-space](../../corpus/concepts/mdp/action-space.md)
-- 仿真：[habitat](../../corpus/simulation/platforms/habitat.md)（主）· [mujoco](../../corpus/simulation/platforms/mujoco.md)（参考）· [pybullet](../../corpus/simulation/platforms/pybullet.md)（参考）
-- 方法对照：[vision-language-action](../../corpus/methods/vision-language-action.md)（VLA 是操作路线，VLN 是导航路线的姊妹）· [vision-language-navigation](../../corpus/methods/vision-language-navigation.md)（VLN 方法族）
-- 评测：[real-world-eval](../../corpus/benchmarks/vla-eval/real-world-eval.md)（可参考真机评估流程）
+- 概念：[embodied-ai](../../../corpus/concepts/foundations/embodied-ai.md) · [embodiment](../../../corpus/concepts/foundations/embodiment.md) · [observation-space](../../../corpus/concepts/mdp/observation-space.md) · [action-space](../../../corpus/concepts/mdp/action-space.md)
+- 仿真：[habitat](../../../corpus/simulation/platforms/habitat.md)（主）· [mujoco](../../../corpus/simulation/platforms/mujoco.md)（参考）· [pybullet](../../../corpus/simulation/platforms/pybullet.md)（参考）
+- 方法对照：[vision-language-action](../../../corpus/methods/vision-language-action.md)（VLA 是操作路线，VLN 是导航路线的姊妹）· [vision-language-navigation](../../../corpus/methods/vision-language-navigation.md)（VLN 方法族）
+- 评测：[real-world-eval](../../../corpus/benchmarks/vla-eval/real-world-eval.md)（可参考真机评估流程）
 
 
 

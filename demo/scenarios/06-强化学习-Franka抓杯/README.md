@@ -1,6 +1,6 @@
 # 强化学习·Franka 抓杯 · RL Pick-and-Place with Isaac Lab
 
-> **一句话描述**：在 [NVIDIA Isaac Lab](../../corpus/simulation/platforms/nvidia-isaac.md) GPU 并行仿真中，用 **PPO** 训练 [Franka Panda](../../corpus/hardware/arms/franka-panda.md) 学会把随机位姿的杯子抓起放到指定托盘——具身智能 RL 路线的「**Hello World**」。
+> **一句话描述**：在 [NVIDIA Isaac Lab](../../../corpus/simulation/platforms/nvidia-isaac.md) GPU 并行仿真中，用 **PPO** 训练 [Franka Panda](../../../corpus/hardware/arms/franka-panda.md) 学会把随机位姿的杯子抓起放到指定托盘——具身智能 RL 路线的「**Hello World**」。
 
 | 字段 | 内容 |
 | --- | --- |
@@ -8,7 +8,7 @@
 | 创建日期 | 2026-08-04 |
 | 状态 | 🟡 设计中 |
 | 负责人 | 待认领 |
-| 关联课题 | [roadmap M3 · 实验复现](../../docs/roadmap.md) |
+| 关联课题 | [roadmap M3 · 实验复现](../../../docs/roadmap.md) |
 
 ---
 
@@ -31,7 +31,7 @@
 | 目标托盘位姿 | 仿真器读取 | 6 维 |
 | 夹爪状态 | 夹爪编码器 | 1 维（开/合） |
 
-> 概念见 [observation-space](../../corpus/concepts/mdp/observation-space.md)。**注意**：纯状态观测（无图像）——这是 RL baseline 与 VLA 的本质区别。
+> 概念见 [observation-space](../../../corpus/concepts/mdp/observation-space.md)。**注意**：纯状态观测（无图像）——这是 RL baseline 与 VLA 的本质区别。
 
 ---
 
@@ -42,7 +42,7 @@
 - **控制频率**：60 Hz（仿真步长）
 - **动作表示**：连续值，限幅 ±1
 
-> 详见 [action-space](../../corpus/concepts/mdp/action-space.md)。
+> 详见 [action-space](../../../corpus/concepts/mdp/action-space.md)。
 
 ---
 
@@ -67,11 +67,11 @@
 
 | 项目 | 规格 |
 | --- | --- |
-| 机械臂 | [Franka Panda](../../corpus/hardware/arms/franka-panda.md)（7-DoF） |
-| 末端执行器 | [Robotiq 2F-85](../../corpus/hardware/end-effectors/robotiq-2f-85.md) 平行夹爪 |
+| 机械臂 | [Franka Panda](../../../corpus/hardware/arms/franka-panda.md)（7-DoF） |
+| 末端执行器 | [Robotiq 2F-85](../../../corpus/hardware/end-effectors/robotiq-2f-85.md) 平行夹爪 |
 | 相机 | 仿真用（Isaac Lab 合成相机） |
 | 计算 | **1× RTX 4090 / A100**（Isaac Lab 并行 1024+ 环境） |
-| 仿真器 | [NVIDIA Isaac Lab](../../corpus/simulation/platforms/nvidia-isaac.md)（原 Orbit，2024 GA） |
+| 仿真器 | [NVIDIA Isaac Lab](../../../corpus/simulation/platforms/nvidia-isaac.md)（原 Orbit，2024 GA） |
 | 真机部署 | sim-to-real 迁移到 Panda |
 
 ---
@@ -87,8 +87,8 @@
   - GAE λ = 0.95
   - 学习率 3e-4（线性衰减）
   - 总步数 50M
-- 概念笔记：[reinforcement-learning](../../corpus/methods/reinforcement-learning.md) · [ppo](../../corpus/methods/ppo.md) · [sac](../../corpus/methods/sac.md) · [reward-function](../../corpus/concepts/mdp/reward-function.md) · [policy](../../corpus/concepts/mdp/policy.md)
-- Sim-to-Real：[domain-randomization](../../corpus/simulation/sim-to-real/domain-randomization.md) · [sim-to-real](../../corpus/concepts/foundations/sim-to-real.md)
+- 概念笔记：[reinforcement-learning](../../../corpus/methods/reinforcement-learning.md) · [ppo](../../../corpus/methods/ppo.md) · [sac](../../../corpus/methods/sac.md) · [reward-function](../../../corpus/concepts/mdp/reward-function.md) · [policy](../../../corpus/concepts/mdp/policy.md)
+- Sim-to-Real：[domain-randomization](../../../corpus/simulation/sim-to-real/domain-randomization.md) · [sim-to-real](../../../corpus/concepts/foundations/sim-to-real.md)
 
 **奖励设计（关键）**：
 ```
@@ -144,7 +144,7 @@ python scripts/reinforcement_learning/rl_games/play.py \
 
 ## 8. 结果与记录（Results）
 
-> 跑通后补充。计划在 [research/experiments/](../../research/experiments/) 下建 `2026-XX-XX-rl-franka-pick-cup/` 实验记录。
+> 跑通后补充。计划在 [research/experiments/](../../../research/experiments/) 下建 `2026-XX-XX-rl-franka-pick-cup/` 实验记录。
 
 - 首次成功演示：待定
 - 复现指标：80% 成功率对应 ~20M 仿真步（参考 Isaac Lab benchmark）
@@ -153,11 +153,11 @@ python scripts/reinforcement_learning/rl_games/play.py \
 
 ## 9. 相关语料（References）
 
-- 方法：[reinforcement-learning](../../corpus/methods/reinforcement-learning.md) · [imitation-learning](../../corpus/methods/imitation-learning.md)
-- 仿真：[nvidia-isaac](../../corpus/simulation/platforms/nvidia-isaac.md) · [domain-randomization](../../corpus/simulation/sim-to-real/domain-randomization.md)
-- 硬件：[franka-panda](../../corpus/hardware/arms/franka-panda.md) · [robotiq-2f-85](../../corpus/hardware/end-effectors/robotiq-2f-85.md)
-- 概念：[policy](../../corpus/concepts/mdp/policy.md) · [reward-function](../../corpus/concepts/mdp/reward-function.md) · [observation-space](../../corpus/concepts/mdp/observation-space.md) · [action-space](../../corpus/concepts/mdp/action-space.md) · [sim-to-real](../../corpus/concepts/foundations/sim-to-real.md)
-- 评测：[rlbench](../../corpus/benchmarks/manipulation/rlbench.md)
+- 方法：[reinforcement-learning](../../../corpus/methods/reinforcement-learning.md) · [imitation-learning](../../../corpus/methods/imitation-learning.md)
+- 仿真：[nvidia-isaac](../../../corpus/simulation/platforms/nvidia-isaac.md) · [domain-randomization](../../../corpus/simulation/sim-to-real/domain-randomization.md)
+- 硬件：[franka-panda](../../../corpus/hardware/arms/franka-panda.md) · [robotiq-2f-85](../../../corpus/hardware/end-effectors/robotiq-2f-85.md)
+- 概念：[policy](../../../corpus/concepts/mdp/policy.md) · [reward-function](../../../corpus/concepts/mdp/reward-function.md) · [observation-space](../../../corpus/concepts/mdp/observation-space.md) · [action-space](../../../corpus/concepts/mdp/action-space.md) · [sim-to-real](../../../corpus/concepts/foundations/sim-to-real.md)
+- 评测：[rlbench](../../../corpus/benchmarks/manipulation/rlbench.md)
 
 ---
 
@@ -173,10 +173,10 @@ python scripts/reinforcement_learning/rl_games/play.py \
   | Sim-to-Real | 较易（演示里就有真机） | 较难（需域随机化） |
   | 上限 | 演示的策略 | 可超越人类 |
 - **进阶方向**：
-  - **Sim-to-Real**：加 [domain-randomization](../../corpus/simulation/sim-to-real/domain-randomization.md) 后部署到真 Panda
-  - **离线 RL**：用 [Open X-Embodiment](../../corpus/datasets/open-x-embodiment.md) 演示训 IQL / CQL
-  - **多任务**：换成 [Behavior-1k](../../corpus/benchmarks/manipulation/behavior-1k.md) 1000 任务 RL 训练
+  - **Sim-to-Real**：加 [domain-randomization](../../../corpus/simulation/sim-to-real/domain-randomization.md) 后部署到真 Panda
+  - **离线 RL**：用 [Open X-Embodiment](../../../corpus/datasets/open-x-embodiment.md) 演示训 IQL / CQL
+  - **多任务**：换成 [Behavior-1k](../../../corpus/benchmarks/manipulation/behavior-1k.md) 1000 任务 RL 训练
 - **已知坑**：
   - Isaac Lab 2.0 与 Isaac Gym API 不兼容，老代码需重写
-  - 奖励设计是核心难点，参考 [RLBench](../../corpus/benchmarks/manipulation/rlbench.md) 提供的 100 任务奖励模板
+  - 奖励设计是核心难点，参考 [RLBench](../../../corpus/benchmarks/manipulation/rlbench.md) 提供的 100 任务奖励模板
 - **对应里程碑**：M3 · 实验复现

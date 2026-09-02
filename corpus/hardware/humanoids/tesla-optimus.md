@@ -188,7 +188,7 @@ Optimus **不依赖 LiDAR**，只用 8 路 RGB 相机 + FSD 视觉模型：
 - 行业：[../../industry/humanoid-overseas/tesla-optimus.md](../../industry/humanoid-overseas/tesla-optimus.md)
 - 灵巧手：[../hands/dexterous-hands-landscape.md](../hands/dexterous-hands-landscape.md)
 - 仿真：[../../simulation/platforms/nvidia-isaac.md](../../simulation/platforms/nvidia-isaac.md)
-- Demo：[05-Figure02-端到端人形](../demo/scenarios/05-Figure02-端到端人形/README.md)（Helix VLA 对照）
+- Demo：[05-Figure02-端到端人形](../../../demo/scenarios/05-Figure02-端到端人形/README.md)（Helix VLA 对照）
 
 ## 10. 参考
 

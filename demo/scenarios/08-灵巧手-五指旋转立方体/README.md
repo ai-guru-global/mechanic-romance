@@ -1,6 +1,6 @@
 # 灵巧手·五指旋转立方体 · Dexterous Hand In-Hand Cube Reorientation
 
-> **一句话描述**：用 [Isaac Lab](../../corpus/simulation/platforms/nvidia-isaac.md) 训练 **5 指灵巧手（Allegro / LEAP Hand）** 在掌内原地旋转一个立方体，使指定目标面朝上——具身智能灵巧操作的天花板级 demo。
+> **一句话描述**：用 [Isaac Lab](../../../corpus/simulation/platforms/nvidia-isaac.md) 训练 **5 指灵巧手（Allegro / LEAP Hand）** 在掌内原地旋转一个立方体，使指定目标面朝上——具身智能灵巧操作的天花板级 demo。
 
 | 字段 | 内容 |
 | --- | --- |
@@ -8,7 +8,7 @@
 | 创建日期 | 2026-08-04 |
 | 状态 | 🟡 设计中 |
 | 负责人 | 待认领 |
-| 关联课题 | [roadmap M3 · 实验复现](../../docs/roadmap.md) |
+| 关联课题 | [roadmap M3 · 实验复现](../../../docs/roadmap.md) |
 
 ---
 
@@ -35,7 +35,7 @@
 | 目标面 | 文本 / one-hot | 6 维 |
 | 可选：腕部相机 | 手腕外相机 | 84×84×3（增加视觉观测） |
 
-> 概念见 [observation-space](../../corpus/concepts/mdp/observation-space.md)。**注意**：通常**不用图像**——直接读仿真器位姿（特权信息），避免视觉噪声干扰。
+> 概念见 [observation-space](../../../corpus/concepts/mdp/observation-space.md)。**注意**：通常**不用图像**——直接读仿真器位姿（特权信息），避免视觉噪声干扰。
 
 ---
 
@@ -46,7 +46,7 @@
 - **控制频率**：120 Hz（仿真）
 - **动作表示**：每关节相对增量
 
-> 详见 [action-space](../../corpus/concepts/mdp/action-space.md)。这是 16+ 维连续动作空间，PPO 等 on-policy 算法需**大批量+长时间**训练。
+> 详见 [action-space](../../../corpus/concepts/mdp/action-space.md)。这是 16+ 维连续动作空间，PPO 等 on-policy 算法需**大批量+长时间**训练。
 
 ---
 
@@ -76,10 +76,10 @@
 | 视觉 | 可选腕部 RGBD |
 | 触觉 | 仿真合成（Isaac Lab 内置）/ 真机需 DIGIT 等触觉传感器 |
 | 计算 | **4× A100**（PPO 训练）/ 1× RTX 4090（推理可） |
-| 仿真器 | [NVIDIA Isaac Lab](../../corpus/simulation/platforms/nvidia-isaac.md)（PhysX 5 GPU 并行） |
+| 仿真器 | [NVIDIA Isaac Lab](../../../corpus/simulation/platforms/nvidia-isaac.md)（PhysX 5 GPU 并行） |
 | 真机 | Allegro Hand + 桌面臂挂载 |
 
-> 灵巧手规格对比见 [allegro](../../corpus/hardware/hands/allegro.md) / [leap-hand](../../corpus/hardware/hands/leap-hand.md) / [shadow-hand](../../corpus/hardware/hands/shadow-hand.md)。
+> 灵巧手规格对比见 [allegro](../../../corpus/hardware/hands/allegro.md) / [leap-hand](../../../corpus/hardware/hands/leap-hand.md) / [shadow-hand](../../../corpus/hardware/hands/shadow-hand.md)。
 
 ---
 
@@ -89,14 +89,14 @@
 - 预训练：无
 - 训练数据：仿真自采（域随机化立方体位置、目标面、摩擦）
 - 关键技术：
-  - **域随机化**（DR）：见 [domain-randomization](../../corpus/simulation/sim-to-real/domain-randomization.md)
+  - **域随机化**（DR）：见 [domain-randomization](../../../corpus/simulation/sim-to-real/domain-randomization.md)
   - **课程学习**：从固定目标 → 随机目标
   - **特权信息**（privileged info）：训练时给真位姿，推理时只给触觉+本体
-  - **Sim-to-Real**：见 [sim-to-real](../../corpus/concepts/foundations/sim-to-real.md)
+  - **Sim-to-Real**：见 [sim-to-real](../../../corpus/concepts/foundations/sim-to-real.md)
 - 代表论文：
   - **OpenAI Rubik's Cube (2019)**：单手解魔方，开创灵巧手 in-hand manipulation
   - **DexCap (2024)**：灵巧手数据采集（人手示教 → 灵巧手执行）
-  - **Dexterous Diffusion Policy (DDEX, 2024)**：把 [Diffusion Policy](../../corpus/methods/diffusion-policy.md) 扩展到灵巧手
+  - **Dexterous Diffusion Policy (DDEX, 2024)**：把 [Diffusion Policy](../../../corpus/methods/diffusion-policy.md) 扩展到灵巧手
 
 **为什么是它**：
 1. **灵巧手 in-hand manipulation** 是具身智能**最难、最炫酷**的任务之一
@@ -142,7 +142,7 @@ python deploy_allegro.py --checkpoint logs/allegro_cube_ckpt.pth
 
 ## 8. 结果与记录（Results）
 
-> 跑通后补充。计划在 [research/experiments/](../../research/experiments/) 下建 `2026-XX-XX-allegro-cube-reorient/` 实验记录。
+> 跑通后补充。计划在 [research/experiments/](../../../research/experiments/) 下建 `2026-XX-XX-allegro-cube-reorient/` 实验记录。
 
 - 首次成功演示：待定
 - 复现指标：Allegro 立方体旋转 SR 80%+（参考 OpenAI / Stanford 报告）
@@ -151,10 +151,10 @@ python deploy_allegro.py --checkpoint logs/allegro_cube_ckpt.pth
 
 ## 9. 相关语料（References）
 
-- 仿真：[nvidia-isaac](../../corpus/simulation/platforms/nvidia-isaac.md) · [domain-randomization](../../corpus/simulation/sim-to-real/domain-randomization.md)
-- 方法对照：[reinforcement-learning](../../corpus/methods/reinforcement-learning.md) · [diffusion-policy](../../corpus/methods/diffusion-policy.md)（DDEX 灵巧版）· [imitation-learning](../../corpus/methods/imitation-learning.md)
-- 概念：[sim-to-real](../../corpus/concepts/foundations/sim-to-real.md) · [observation-space](../../corpus/concepts/mdp/observation-space.md) · [action-space](../../corpus/concepts/mdp/action-space.md) · [policy](../../corpus/concepts/mdp/policy.md) · [reward-function](../../corpus/concepts/mdp/reward-function.md)
-- 硬件：[allegro](../../corpus/hardware/hands/allegro.md) · [leap-hand](../../corpus/hardware/hands/leap-hand.md) · [shadow-hand](../../corpus/hardware/hands/shadow-hand.md)
+- 仿真：[nvidia-isaac](../../../corpus/simulation/platforms/nvidia-isaac.md) · [domain-randomization](../../../corpus/simulation/sim-to-real/domain-randomization.md)
+- 方法对照：[reinforcement-learning](../../../corpus/methods/reinforcement-learning.md) · [diffusion-policy](../../../corpus/methods/diffusion-policy.md)（DDEX 灵巧版）· [imitation-learning](../../../corpus/methods/imitation-learning.md)
+- 概念：[sim-to-real](../../../corpus/concepts/foundations/sim-to-real.md) · [observation-space](../../../corpus/concepts/mdp/observation-space.md) · [action-space](../../../corpus/concepts/mdp/action-space.md) · [policy](../../../corpus/concepts/mdp/policy.md) · [reward-function](../../../corpus/concepts/mdp/reward-function.md)
+- 硬件：[allegro](../../../corpus/hardware/hands/allegro.md) · [leap-hand](../../../corpus/hardware/hands/leap-hand.md) · [shadow-hand](../../../corpus/hardware/hands/shadow-hand.md)
 
 
 

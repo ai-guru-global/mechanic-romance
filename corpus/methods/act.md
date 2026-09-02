@@ -127,7 +127,7 @@ output: [a_t, a_t+1, ..., a_t+K-1]
 - 硬件：[franka-panda](../hardware/arms/franka-panda.md)（参考）
 - 仿真：[mujoco](../simulation/platforms/mujoco.md)
 - 概念：[sim-to-real](../concepts/foundations/sim-to-real.md)
-- Demo：[02-ACT-双手叠衣](../demo/scenarios/02-ACT-双手叠衣/README.md) · [08-灵巧手-五指旋转立方体](../demo/scenarios/08-灵巧手-五指旋转立方体/README.md)（DDEX 路线）
+- Demo：[02-ACT-双手叠衣](../../demo/scenarios/02-ACT-双手叠衣/README.md) · [08-灵巧手-五指旋转立方体](../../demo/scenarios/08-灵巧手-五指旋转立方体/README.md)（DDEX 路线）
 
 ## 参考论文
 

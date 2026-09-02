@@ -227,7 +227,7 @@ RL 控制（Isaac Lab 训练）
 - 硬件：[../compute/nvidia-jetson-orin.md](../compute/nvidia-jetson-orin.md) · [../sensors/intel-realsense-d435.md](../sensors/intel-realsense-d435.md)
 - 仿真：[../../simulation/platforms/nvidia-isaac.md](../../simulation/platforms/nvidia-isaac.md)
 - 方法：[../../methods/reinforcement-learning.md](../../methods/reinforcement-learning.md) · [../../methods/ppo.md](../../methods/ppo.md)
-- Demo：[08-灵巧手-五指旋转立方体](../demo/scenarios/08-灵巧手-五指旋转立方体/README.md)
+- Demo：[08-灵巧手-五指旋转立方体](../../../demo/scenarios/08-灵巧手-五指旋转立方体/README.md)
 
 ## 12. 参考
 

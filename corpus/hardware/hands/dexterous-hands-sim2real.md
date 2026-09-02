@@ -393,7 +393,7 @@ for step in range(steps):
 - 仿真：[nvidia-isaac](../../simulation/platforms/nvidia-isaac.md) · [mujoco](../../simulation/platforms/mujoco.md) · [domain-randomization](../../simulation/sim-to-real/domain-randomization.md)
 - 触觉：[digit-tactile.md](../sensors/digit-tactile.md)
 - 方法：[reinforcement-learning](../../methods/reinforcement-learning.md) · [diffusion-policy](../../methods/diffusion-policy.md)
-- Demo：[08-灵巧手-五指旋转立方体](../../demo/scenarios/08-灵巧手-五指旋转立方体/README.md)
+- Demo：[08-灵巧手-五指旋转立方体](../../../demo/scenarios/08-灵巧手-五指旋转立方体/README.md)
 
 ## 10. 参考
 

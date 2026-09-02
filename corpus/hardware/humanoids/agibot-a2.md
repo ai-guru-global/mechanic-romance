@@ -220,7 +220,7 @@ X1（开源双臂）：生态构建
 - 硬件：[../compute/nvidia-jetson-orin.md](../compute/nvidia-jetson-orin.md) · [../sensors/intel-realsense-d435.md](../sensors/intel-realsense-d435.md)
 - 仿真：[../../simulation/platforms/nvidia-isaac.md](../../simulation/platforms/nvidia-isaac.md)
 - 方法：[../../methods/vision-language-action.md](../../methods/vision-language-action.md) · [../../methods/reinforcement-learning.md](../../methods/reinforcement-learning.md)
-- Demo：[02-ACT-双手叠衣](../demo/scenarios/02-ACT-双手叠衣/README.md)（X1 对标 ALOHA）
+- Demo：[02-ACT-双手叠衣](../../../demo/scenarios/02-ACT-双手叠衣/README.md)（X1 对标 ALOHA）
 
 ## 11. 参考
 

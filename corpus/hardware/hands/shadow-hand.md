@@ -206,7 +206,7 @@ env = ShadowHandCubeEnv(
 - [`../../methods/imitation-learning.md`](../../methods/imitation-learning.md) — BC-Z 等跨模态
 - [`../../concepts/foundations/sim-to-real.md`](../../concepts/foundations/sim-to-real.md) — Shadow sim-to-real
 - [`../../simulation/sim-to-real/domain-randomization.md`](../../simulation/sim-to-real/domain-randomization.md) — 灵巧手 sim-to-real
-- [demo 08-灵巧手-五指旋转立方体](../../demo/scenarios/08-灵巧手-五指旋转立方体/README.md) — 直接落地场景
+- [demo 08-灵巧手-五指旋转立方体](../../../demo/scenarios/08-灵巧手-五指旋转立方体/README.md) — 直接落地场景
 
 ---
 

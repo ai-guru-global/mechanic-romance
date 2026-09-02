@@ -260,7 +260,7 @@ slip_prob = lstm(sequence_of_features)  # 0-1
 - 灵巧手：[../hands/dexterous-hands-landscape.md](../hands/dexterous-hands-landscape.md) · [../hands/dexterous-hands-data-collection.md](../hands/dexterous-hands-data-collection.md) · [../hands/dexterous-hands-sim2real.md](../hands/dexterous-hands-sim2real.md) · [leap-hand.md](../hands/leap-hand.md)
 - 概念：[../../concepts/mdp/observation-space.md](../../concepts/mdp/observation-space.md) · [../../concepts/perception/visual-representation.md](../../concepts/perception/visual-representation.md)
 - 仿真：[../../simulation/platforms/nvidia-isaac.md](../../simulation/platforms/nvidia-isaac.md)
-- Demo：[08-灵巧手-五指旋转立方体](../demo/scenarios/08-灵巧手-五指旋转立方体/README.md)
+- Demo：[08-灵巧手-五指旋转立方体](../../../demo/scenarios/08-灵巧手-五指旋转立方体/README.md)
 
 ## 13. 参考
 

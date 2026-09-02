@@ -212,7 +212,7 @@ return policy
 - 方法：[imitation-learning](imitation-learning.md) · [behavioral-cloning](behavioral-cloning.md) · [diffusion-policy](diffusion-policy.md) · [act](act.md)
 - 概念：[observation-space](../concepts/mdp/observation-space.md) · [action-space](../concepts/mdp/action-space.md) · [policy](../concepts/mdp/policy.md)
 - 仿真：[mujoco](../simulation/platforms/mujoco.md) · [nvidia-isaac](../simulation/platforms/nvidia-isaac.md)
-- Demo：[02-ACT-双手叠衣](../demo/scenarios/02-ACT-双手叠衣/README.md) · [01-扩散策略-桌面堆叠](../demo/scenarios/01-扩散策略-桌面堆叠/README.md)
+- Demo：[02-ACT-双手叠衣](../../demo/scenarios/02-ACT-双手叠衣/README.md) · [01-扩散策略-桌面堆叠](../../demo/scenarios/01-扩散策略-桌面堆叠/README.md)
 
 ## 参考论文
 

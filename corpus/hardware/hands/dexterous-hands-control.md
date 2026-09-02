@@ -308,7 +308,7 @@ while True:
 - 触觉：[digit-tactile.md](../sensors/digit-tactile.md)
 - 概念：[sim-to-real](../../concepts/foundations/sim-to-real.md) · [action-space](../../concepts/mdp/action-space.md) · [observation-space](../../concepts/mdp/observation-space.md)
 - 仿真：[nvidia-isaac](../../simulation/platforms/nvidia-isaac.md)
-- Demo：[08-灵巧手-五指旋转立方体](../../demo/scenarios/08-灵巧手-五指旋转立方体/README.md)
+- Demo：[08-灵巧手-五指旋转立方体](../../../demo/scenarios/08-灵巧手-五指旋转立方体/README.md)
 
 ## 11. 参考
 

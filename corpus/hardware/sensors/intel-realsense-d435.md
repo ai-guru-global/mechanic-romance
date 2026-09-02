@@ -264,7 +264,7 @@ Isaac Sim → Replicator → Synthetic Data → D435 模型
 - 仿真：[../../simulation/platforms/nvidia-isaac.md](../../simulation/platforms/nvidia-isaac.md) · [../../simulation/platforms/habitat.md](../../simulation/platforms/habitat.md)
 - 概念：[../../concepts/mdp/observation-space.md](../../concepts/mdp/observation-space.md) · [../../concepts/perception/visual-representation.md](../../concepts/perception/visual-representation.md)
 - 方法：[../../methods/vision-language-action.md](../../methods/vision-language-action.md)
-- Demo：[05-Figure02-端到端人形](../demo/scenarios/05-Figure02-端到端人形/README.md) · [07-视觉语言导航-VLN-CE](../demo/scenarios/07-视觉语言导航-VLN-CE/README.md)
+- Demo：[05-Figure02-端到端人形](../../../demo/scenarios/05-Figure02-端到端人形/README.md) · [07-视觉语言导航-VLN-CE](../../../demo/scenarios/07-视觉语言导航-VLN-CE/README.md)
 
 ## 12. 参考
 

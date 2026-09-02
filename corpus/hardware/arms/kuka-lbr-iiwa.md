@@ -242,7 +242,7 @@ pub.publish(target)
 - 同类：[franka-panda.md](franka-panda.md)（**学术研究首选**）· [ur5e.md](ur5e.md)
 - 仿真：[../../simulation/platforms/nvidia-isaac.md](../../simulation/platforms/nvidia-isaac.md)
 - 概念：[../../concepts/mdp/action-space.md](../../concepts/mdp/action-space.md) · [../../concepts/foundations/degrees-of-freedom.md](../../concepts/foundations/degrees-of-freedom.md)
-- Demo：[01-扩散策略-桌面堆叠](../demo/scenarios/01-扩散策略-桌面堆叠/README.md) · [06-强化学习-Franka抓杯](../demo/scenarios/06-强化学习-Franka抓杯/README.md)
+- Demo：[01-扩散策略-桌面堆叠](../../../demo/scenarios/01-扩散策略-桌面堆叠/README.md) · [06-强化学习-Franka抓杯](../../../demo/scenarios/06-强化学习-Franka抓杯/README.md)
 - 灵巧手：[../hands/allegro.md](../hands/allegro.md)
 
 ## 12. 参考

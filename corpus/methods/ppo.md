@@ -1,6 +1,6 @@
 # PPO · Proximal Policy Optimization（近端策略优化）
 
-> **on-policy Actor-Critic 算法**的**事实标准**——通过**裁剪（clipping）目标函数**保证策略更新"近端"不剧变，2017 年由 OpenAI 提出后统治强化学习界 8 年，是具身 RL（[demo 06-强化学习-Franka 抓杯](../demo/scenarios/06-强化学习-Franka抓杯/README.md) 和 [demo 08-灵巧手](../demo/scenarios/08-灵巧手-五指旋转立方体/README.md)）的默认算法。
+> **on-policy Actor-Critic 算法**的**事实标准**——通过**裁剪（clipping）目标函数**保证策略更新"近端"不剧变，2017 年由 OpenAI 提出后统治强化学习界 8 年，是具身 RL（[demo 06-强化学习-Franka 抓杯](../../demo/scenarios/06-强化学习-Franka抓杯/README.md) 和 [demo 08-灵巧手](../../demo/scenarios/08-灵巧手-五指旋转立方体/README.md)）的默认算法。
 
 ## 核心思想
 
@@ -131,8 +131,8 @@ PPO 是**操作 / 灵巧手 / locomotion** 的默认 RL 算法：
 
 | 任务 | 状态-动作 | PPO 表现 |
 | --- | --- | --- |
-| **Franka 抓杯** | 7-DoF 关节 | SOTA（[demo 06](../demo/scenarios/06-强化学习-Franka抓杯/README.md)） |
-| **Allegro 立方体旋转** | 16-DoF 灵巧手 | SOTA（[demo 08](../demo/scenarios/08-灵巧手-五指旋转立方体/README.md)） |
+| **Franka 抓杯** | 7-DoF 关节 | SOTA（[demo 06](../../demo/scenarios/06-强化学习-Franka抓杯/README.md)） |
+| **Allegro 立方体旋转** | 16-DoF 灵巧手 | SOTA（[demo 08](../../demo/scenarios/08-灵巧手-五指旋转立方体/README.md)） |
 | **Humanoid 行走** | 30+ DoF | SOTA（Isaac Lab Humanoid） |
 | **四足 locomotion** | 12 DoF | SOTA（Legged Gym） |
 | **导航** | 2-DoF 底盘 | OK，VLN 主流是 IL |
@@ -179,7 +179,7 @@ model.learn(total_timesteps=10_000_000)
 
 ## 相关语料
 
-- 论文笔记：[demo 06-强化学习-Franka 抓杯](../demo/scenarios/06-强化学习-Franka抓杯/README.md) 引用 PPO
+- 论文笔记：[demo 06-强化学习-Franka 抓杯](../../demo/scenarios/06-强化学习-Franka抓杯/README.md) 引用 PPO
 - 方法：[reinforcement-learning](reinforcement-learning.md) · [sac](sac.md) · [dagger](dagger.md)
 - 仿真：[nvidia-isaac](../simulation/platforms/nvidia-isaac.md)（PPO 标配平台）
 - 概念：[policy](../concepts/mdp/policy.md) · [reward-function](../concepts/mdp/reward-function.md) · [sim-to-real](../concepts/foundations/sim-to-real.md) · [domain-randomization](../simulation/sim-to-real/domain-randomization.md)

@@ -224,7 +224,7 @@ LEAP 论文报告的核心 Sim-to-Real 技巧：
 - [`../../methods/imitation-learning.md`](../../methods/imitation-learning.md) — DexCap 数据采集
 - [`../../simulation/platforms/nvidia-isaac.md`](../../simulation/platforms/nvidia-isaac.md) — Isaac Lab 训练
 - [`../../simulation/sim-to-real/domain-randomization.md`](../../simulation/sim-to-real/domain-randomization.md) — 灵巧手 sim-to-real
-- [demo 08-灵巧手-五指旋转立方体](../../demo/scenarios/08-灵巧手-五指旋转立方体/README.md) — 直接落地场景
+- [demo 08-灵巧手-五指旋转立方体](../../../demo/scenarios/08-灵巧手-五指旋转立方体/README.md) — 直接落地场景
 
 ---
 

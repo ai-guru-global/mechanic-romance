@@ -8,7 +8,7 @@
 | 创建日期 | 2026-08-04 |
 | 状态 | 🟡 设计中 |
 | 负责人 | 待认领 |
-| 关联课题 | [roadmap M2 · 首个可演示场景](../../docs/roadmap.md) |
+| 关联课题 | [roadmap M2 · 首个可演示场景](../../../docs/roadmap.md) |
 
 ---
 
@@ -29,7 +29,7 @@
 | 本体感知 | 关节编码器 | 7-DoF 关节角 + 末端 6-DoF 位姿 |
 | 目标 | 图像中绿色 mask / 文本条件 | 可选，扩到条件生成时使用 |
 
-> 详细概念见 [observation-space](../../corpus/concepts/mdp/observation-space.md)。
+> 详细概念见 [observation-space](../../../corpus/concepts/mdp/observation-space.md)。
 
 ---
 
@@ -40,7 +40,7 @@
 - **控制频率**：10 Hz（与观测对齐）
 - **动作表示**：**相对增量**（增量式位姿预测），避免绝对位姿漂移
 
-> 对比「动作分块（action chunking）」在 [imitation-learning](../../corpus/methods/imitation-learning.md) 中的讨论。
+> 对比「动作分块（action chunking）」在 [imitation-learning](../../../corpus/methods/imitation-learning.md) 中的讨论。
 
 ---
 
@@ -62,21 +62,21 @@
 
 | 项目 | 规格 |
 | --- | --- |
-| 机械臂 | [Franka Panda](../../corpus/hardware/arms/franka-panda.md)（7-DoF） |
-| 末端执行器 | [Robotiq 2F-85](../../corpus/hardware/end-effectors/robotiq-2f-85.md) 平行夹爪 |
+| 机械臂 | [Franka Panda](../../../corpus/hardware/arms/franka-panda.md)（7-DoF） |
+| 末端执行器 | [Robotiq 2F-85](../../../corpus/hardware/end-effectors/robotiq-2f-85.md) 平行夹爪 |
 | 相机 | Intel RealSense D435 顶视安装 |
 | 计算 | 1× RTX 4090（训练）/ 推理可在 3060 上跑 |
-| 仿真器 | [MuJoCo](../../corpus/simulation/platforms/mujoco.md)（官方推荐）或 [Genesis](../../corpus/simulation/platforms/genesis.md) |
+| 仿真器 | [MuJoCo](../../../corpus/simulation/platforms/mujoco.md)（官方推荐）或 [Genesis](../../../corpus/simulation/platforms/genesis.md) |
 | 真实平台 | Push-T 真实硬件套件（Stanford 官方） |
 
 ---
 
 ## 6. 方法（Method）
 
-- 策略：[Diffusion Policy](../../corpus/methods/diffusion-policy.md)（DDPM 风格条件扩散）
+- 策略：[Diffusion Policy](../../../corpus/methods/diffusion-policy.md)（DDPM 风格条件扩散）
 - 预训练：无（从 0 训练）
 - 训练数据：约 100 条专家演示（论文 206 条；本场景可缩到 100 条做最小复现）
-- 论文笔记：[2023-chi-diffusion-policy](../../corpus/papers/diffusion-policy/2023-chi-diffusion-policy.md)
+- 论文笔记：[2023-chi-diffusion-policy](../../../corpus/papers/diffusion-policy/2023-chi-diffusion-policy.md)
 
 **为什么是它**：模仿学习场景下的「**多模态动作分布**」典型问题，扩散策略是当前最强 baseline，门槛低、效果好、易讲解。
 
@@ -106,7 +106,7 @@ python train.py --task push-t --data data/pusht_demos.hdf5 --epochs 500
 
 ## 8. 结果与记录（Results）
 
-> 跑通后补充。计划在 [research/experiments/](../../research/experiments/) 下建 `2026-XX-XX-diffusion-policy-pusht/` 实验记录。
+> 跑通后补充。计划在 [research/experiments/](../../../research/experiments/) 下建 `2026-XX-XX-diffusion-policy-pusht/` 实验记录。
 
 - 首次成功演示：待定
 - 复现指标：与论文 86% / 95% 区间对比
@@ -115,16 +115,16 @@ python train.py --task push-t --data data/pusht_demos.hdf5 --epochs 500
 
 ## 9. 相关语料（References）
 
-- 论文：[2023-chi-diffusion-policy](../../corpus/papers/diffusion-policy/2023-chi-diffusion-policy.md)
-- 方法：[diffusion-policy](../../corpus/methods/diffusion-policy.md) · [imitation-learning](../../corpus/methods/imitation-learning.md) · [behavioral-cloning](../../corpus/methods/behavioral-cloning.md)
-- 硬件：[franka-panda](../../corpus/hardware/arms/franka-panda.md) · [robotiq-2f-85](../../corpus/hardware/end-effectors/robotiq-2f-85.md)
-- 仿真：[mujoco](../../corpus/simulation/platforms/mujoco.md)
-- 概念：[embodied-ai](../../corpus/concepts/foundations/embodied-ai.md) · [observation-space](../../corpus/concepts/mdp/observation-space.md) · [action-space](../../corpus/concepts/mdp/action-space.md)
+- 论文：[2023-chi-diffusion-policy](../../../corpus/papers/diffusion-policy/2023-chi-diffusion-policy.md)
+- 方法：[diffusion-policy](../../../corpus/methods/diffusion-policy.md) · [imitation-learning](../../../corpus/methods/imitation-learning.md) · [behavioral-cloning](../../../corpus/methods/behavioral-cloning.md)
+- 硬件：[franka-panda](../../../corpus/hardware/arms/franka-panda.md) · [robotiq-2f-85](../../../corpus/hardware/end-effectors/robotiq-2f-85.md)
+- 仿真：[mujoco](../../../corpus/simulation/platforms/mujoco.md)
+- 概念：[embodied-ai](../../../corpus/concepts/foundations/embodied-ai.md) · [observation-space](../../../corpus/concepts/mdp/observation-space.md) · [action-space](../../../corpus/concepts/mdp/action-space.md)
 
 ---
 
 ## 10. 备注
 
 - **为什么选作 `01`**：是模仿学习最经典的入门 demo，仿真+真机都有完整开源，对应 M2 里程碑。
-- **可扩展方向**：换成 Diffusion Policy 在 [LIBERO](../../corpus/benchmarks/manipulation/libero.md) 上的多任务版本（30+ 任务）。
+- **可扩展方向**：换成 Diffusion Policy 在 [LIBERO](../../../corpus/benchmarks/manipulation/libero.md) 上的多任务版本（30+ 任务）。
 - **已知坑**：Diffusion Policy 推理慢（10-15 Hz），实时部署需用 DDIM + 动作分块。

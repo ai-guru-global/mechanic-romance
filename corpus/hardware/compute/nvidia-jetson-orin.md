@@ -288,7 +288,7 @@ nsys profile -o profile.qdrep python3 vla_inference.py
 - 人形：[../humanoids/unitree-g1.md](../humanoids/unitree-g1.md) · [../humanoids/agibot-a2.md](../humanoids/agibot-a2.md)
 - 仿真：[../../simulation/platforms/nvidia-isaac.md](../../simulation/platforms/nvidia-isaac.md)
 - 概念：[../../concepts/training/finetuning.md](../../concepts/training/finetuning.md)
-- Demo：[04-OpenVLA-7B-开源VLA](../demo/scenarios/04-OpenVLA-7B-开源VLA/README.md) · [05-Figure02-端到端人形](../demo/scenarios/05-Figure02-端到端人形/README.md)
+- Demo：[04-OpenVLA-7B-开源VLA](../../../demo/scenarios/04-OpenVLA-7B-开源VLA/README.md) · [05-Figure02-端到端人形](../../../demo/scenarios/05-Figure02-端到端人形/README.md)
 
 ## 12. 参考
 

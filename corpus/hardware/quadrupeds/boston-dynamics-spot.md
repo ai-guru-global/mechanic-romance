@@ -227,7 +227,7 @@ Spot SDK（Python / C++ / ROS2）
 - 行业：[../../industry/humanoid-china/unitree.md](../../industry/humanoid-china/unitree.md)（宇树对比）
 - 仿真：[../../simulation/platforms/nvidia-isaac.md](../../simulation/platforms/nvidia-isaac.md)
 - 方法：[../../methods/reinforcement-learning.md](../../methods/reinforcement-learning.md) · [../../methods/ppo.md](../../methods/ppo.md)
-- Demo：[06-强化学习-Franka抓杯](../demo/scenarios/06-强化学习-Franka抓杯/README.md)（强化学习参照）
+- Demo：[06-强化学习-Franka抓杯](../../../demo/scenarios/06-强化学习-Franka抓杯/README.md)（强化学习参照）
 
 ## 12. 参考
 

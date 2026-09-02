@@ -59,7 +59,7 @@ $150k ── Shadow Hand（工业级）
 | DoF 范围 | 难度 | 训练成本 | 适用 |
 | --- | --- | --- | --- |
 | 6-9 | **低** | 100k RL 步 | 简单抓取 |
-| 12-16 | **中** | 1-10M 步 | in-hand rotation（[demo 08](../../demo/scenarios/08-灵巧手-五指旋转立方体/README.md)） |
+| 12-16 | **中** | 1-10M 步 | in-hand rotation（[demo 08](../../../demo/scenarios/08-灵巧手-五指旋转立方体/README.md)） |
 | 17-20 | **高** | 10-100M 步 | 工具使用、乐器演奏 |
 | 24+ | **极高** | 100M+ 步 | 拟人操作、神经科学 |
 
@@ -147,7 +147,7 @@ LEAP Hand 出现（2023）打破 5 年价格壁垒，**研究民主化** 趋势�
 ├── $30k - $100k
 │   └── 长期/工业级 → Shadow Hand（[shadow-hand.md](shadow-hand.md)）
 └── 配套人形
-    ├── Figure 02 → Helix 灵巧手（[demo 05](../../demo/scenarios/05-Figure02-端到端人形/README.md)）
+    ├── Figure 02 → Helix 灵巧手（[demo 05](../../../demo/scenarios/05-Figure02-端到端人形/README.md)）
     ├── 1X Neo → 1X 灵巧手
     ├── 宇树 H1 → Dex3-1
     └── 智元 A2 → 灵犀 X1
@@ -173,7 +173,7 @@ LEAP Hand 出现（2023）打破 5 年价格壁垒，**研究民主化** 趋势�
 - 四足：[boston-dynamics-spot.md](../quadrupeds/boston-dynamics-spot.md) · [unitree-go2.md](../quadrupeds/unitree-go2.md)
 - 仿真：[nvidia-isaac](../../simulation/platforms/nvidia-isaac.md) · [mujoco](../../simulation/platforms/mujoco.md)
 - 方法：[reinforcement-learning](../../methods/reinforcement-learning.md) · [diffusion-policy](../../methods/diffusion-policy.md) · [imitation-learning](../../methods/imitation-learning.md)
-- Demo：[08-灵巧手-五指旋转立方体](../../demo/scenarios/08-灵巧手-五指旋转立方体/README.md)
+- Demo：[08-灵巧手-五指旋转立方体](../../../demo/scenarios/08-灵巧手-五指旋转立方体/README.md)
 
 ---
 
