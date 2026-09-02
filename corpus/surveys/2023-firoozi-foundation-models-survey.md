@@ -192,8 +192,8 @@ OXE 数据虽然跨 22 本体，但综述承认**形态相近时才真正泛化*
 
 ### VLA / 策略
 - **RT-1** (Brohan 2022) — 首个机器人 Transformer
-- **RT-2** (Brohan 2023) — VLM + 机器人，涌现泛化 → [`../papers/vla/2023-google-rt2.md`](../papers/vla/2023-google-rt2.md)
-- **OpenVLA** (Kim 2024) — 开源 7B VLA → [`../papers/vla/2024-openvla.md`](../papers/vla/2024-openvla.md)
+- **RT-2** (Brohan 2023) — VLM + 机器人，涌现泛化 → [`../papers/vla/2023-brohan-rt2.md`](../papers/vla/2023-brohan-rt2.md)
+- **OpenVLA** (Kim 2024) — 开源 7B VLA → [`../papers/vla/2024-kim-openvla.md`](../papers/vla/2024-kim-openvla.md)
 - **Octo** (Team 2024) — 开源多本体 Transformer
 - **Diffusion Policy** (Chi 2023) — 扩散动作 → [`../papers/diffusion-policy/2023-chi-diffusion-policy.md`](../papers/diffusion-policy/2023-chi-diffusion-policy.md)
 - **ACT / ALOHA** (Zhao 2023) — chunk + CVAE → [`../papers/imitation-learning/2023-zhao-act.md`](../papers/imitation-learning/2023-zhao-act.md)
@@ -257,4 +257,4 @@ OXE 数据虽然跨 22 本体，但综述承认**形态相近时才真正泛化*
 - [`../concepts/foundations/embodied-ai.md`](../concepts/foundations/embodied-ai.md) — 具身智能定义
 - [`../concepts/foundations/embodiment.md`](../concepts/foundations/embodiment.md) — 跨本体泛化的概念基础
 - [`../datasets/open-x-embodiment.md`](../datasets/open-x-embodiment.md) — 数据基石（综述 §5）
-- [`../papers/vla/2023-google-rt2.md`](../papers/vla/2023-google-rt2.md) / [`../papers/vla/2024-openvla.md`](../papers/vla/2024-openvla.md) / [`../papers/diffusion-policy/2023-chi-diffusion-policy.md`](../papers/diffusion-policy/2023-chi-diffusion-policy.md) / [`../papers/imitation-learning/2023-zhao-act.md`](../papers/imitation-learning/2023-zhao-act.md) — 综述引用的代表论文笔记
+- [`../papers/vla/2023-brohan-rt2.md`](../papers/vla/2023-brohan-rt2.md) / [`../papers/vla/2024-kim-openvla.md`](../papers/vla/2024-kim-openvla.md) / [`../papers/diffusion-policy/2023-chi-diffusion-policy.md`](../papers/diffusion-policy/2023-chi-diffusion-policy.md) / [`../papers/imitation-learning/2023-zhao-act.md`](../papers/imitation-learning/2023-zhao-act.md) — 综述引用的代表论文笔记

@@ -232,5 +232,5 @@ ACT 是一篇**"简单到极致、却极其有效"**的论文。它的核心 ide
 - [`../../methods/behavioral-cloning.md`](../../methods/behavioral-cloning.md) — ACT 本质是 BC + chunk + CVAE
 - [`../../concepts/mdp/action-space.md`](../../concepts/mdp/action-space.md) — 动作空间与 chunk 的关系
 - [`../diffusion-policy/2023-chi-diffusion-policy.md`](../diffusion-policy/2023-chi-diffusion-policy.md) — 同年并发、思路互补（多模态动作建模的两条路）
-- [`../vla/2024-openvla.md`](../vla/2024-openvla.md) — OpenVLA 借鉴 ACT 的 chunk 思想
+- [`../vla/2024-kim-openvla.md`](../vla/2024-kim-openvla.md) — OpenVLA 借鉴 ACT 的 chunk 思想
 - [`../../hardware/arms/ur5e.md`](../../hardware/arms/ur5e.md) — 双臂任务的另一常用平台

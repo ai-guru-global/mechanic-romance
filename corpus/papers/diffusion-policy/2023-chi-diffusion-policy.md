@@ -224,6 +224,6 @@ Diffusion Policy 是我读过的**工程价值最高的 manipulation 论文之�
 - [`../../methods/behavioral-cloning.md`](../../methods/behavioral-cloning.md) — DP 是 BC 的高级变体
 - [`../../methods/imitation-learning.md`](../../methods/imitation-learning.md) — IL 框架
 - [`../imitation-learning/2023-zhao-act.md`](../imitation-learning/2023-zhao-act.md) — ACT：并发的"动作分块 + Transformer"方案，思路互补
-- [`../vla/2023-google-rt2.md`](../vla/2023-google-rt2.md) — DP 与 VLA 的两条主流路线对比
-- [`../vla/2024-openvla.md`](../vla/2024-openvla.md) — DP 在精细任务上领先 OpenVLA 的根源
+- [`../vla/2023-brohan-rt2.md`](../vla/2023-brohan-rt2.md) — DP 与 VLA 的两条主流路线对比
+- [`../vla/2024-kim-openvla.md`](../vla/2024-kim-openvla.md) — DP 在精细任务上领先 OpenVLA 的根源
 - [`../../hardware/arms/franka-panda.md`](../../hardware/arms/franka-panda.md) — DP 真机验证平台

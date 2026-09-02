@@ -76,7 +76,7 @@
 - 策略：**OpenVLA-7B = Prismatic VLM (SigLIP + Llama 2 7B) + 动作头**
 - 预训练：970K 演示 episode（Open X-Embodiment）
 - 微调：LoRA（rank 32） 在 BridgeData V2 上
-- 论文笔记：[2024-openvla](../../corpus/papers/vla/2024-openvla.md)
+- 论文笔记：[2024-kim-openvla](../../corpus/papers/vla/2024-kim-openvla.md)
 
 **为什么是它**：
 1. **开源 + 权重可下载**（HF Hub，7B/13B 两档）
@@ -130,7 +130,7 @@ python experiments/robot/libero/run_libero_eval.py \
 
 ## 9. 相关语料（References）
 
-- 论文：[2024-openvla](../../corpus/papers/vla/2024-openvla.md)
+- 论文：[2024-kim-openvla](../../corpus/papers/vla/2024-kim-openvla.md)
 - 方法：[vision-language-action](../../corpus/methods/vision-language-action.md)
 - 数据集：[open-x-embodiment](../../corpus/datasets/open-x-embodiment.md)
 - 评测：[libero](../../corpus/benchmarks/manipulation/libero.md)

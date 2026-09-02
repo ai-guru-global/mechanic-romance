@@ -240,5 +240,5 @@ RT-2 是**具身智能的 GPT-3 时刻**——它没有发明任何全新算法�
 - [`../../methods/behavioral-cloning.md`](../../methods/behavioral-cloning.md) — RT-2 本质是 BC 训练（动作 token 的分类损失）
 - [`../../concepts/foundations/embodied-ai.md`](../../concepts/foundations/embodied-ai.md) — 具身智能的定义
 - [`../../datasets/open-x-embodiment.md`](../../datasets/open-x-embodiment.md) — RT-2 之后跨本体的延伸
-- [`2024-openvla.md`](2024-openvla.md) — RT-2 思想的开源复刻与平民化
+- [`2024-kim-openvla.md`](2024-kim-openvla.md) — RT-2 思想的开源复刻与平民化
 - [`../surveys/../../surveys/2023-firoozi-foundation-models-survey.md`](../../surveys/2023-firoozi-foundation-models-survey.md) — 综述中的 VLA 章节

@@ -35,8 +35,8 @@
 ## 论文索引（按主题）
 
 ### VLA 系列
-- 🟢 [`vla/2023-google-rt2.md`](vla/2023-google-rt2.md) — RT-2：VLM + 机器人，涌现泛化
-- 🟢 [`vla/2024-openvla.md`](vla/2024-openvla.md) — OpenVLA：开源 7B VLA
+- 🟢 [`vla/2023-brohan-rt2.md`](vla/2023-brohan-rt2.md) — RT-2：VLM + 机器人，涌现泛化
+- 🟢 [`vla/2024-kim-openvla.md`](vla/2024-kim-openvla.md) — OpenVLA：开源 7B VLA
 - ⚪ `vla/2022-brohan-rt1.md` — RT-1：首个机器人 Transformer
 - ⚪ `vla/2023-octo.md` — Octo：开源通用策略
 - ⚪ `vla/2024-pi-zero.md` — π₀：flow matching 动作头

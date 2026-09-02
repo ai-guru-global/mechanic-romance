@@ -84,7 +84,7 @@
 - 策略：**RT-2 = PaLI-X (55B VLM) + 动作头**，联合微调
 - 预训练：PaLI-X 已在视觉-语言数据上预训练
 - 训练数据：RT-1 演示数据 + 互联网视觉-语言数据
-- 论文笔记：[2023-google-rt2](../../corpus/papers/vla/2023-google-rt2.md)
+- 论文笔记：[2023-brohan-rt2](../../corpus/papers/vla/2023-brohan-rt2.md)
 
 **为什么是它**：VLA 范式的**开山之作**（2023 年 7 月），首次把机器人动作当作"语言"处理，泛化能力跃迁。
 
@@ -123,7 +123,7 @@ python inference.py --model rt2_55b --ckpt gs://rt2-weights
 
 ## 9. 相关语料（References）
 
-- 论文：[2023-google-rt2](../../corpus/papers/vla/2023-google-rt2.md)
+- 论文：[2023-brohan-rt2](../../corpus/papers/vla/2023-brohan-rt2.md)
 - 方法：[vision-language-action](../../corpus/methods/vision-language-action.md)
 - 数据集：[open-x-embodiment](../../corpus/datasets/open-x-embodiment.md)
 - 评测：[real-world-eval](../../corpus/benchmarks/vla-eval/real-world-eval.md)
@@ -141,4 +141,4 @@ python inference.py --model rt2_55b --ckpt gs://rt2-weights
   - RT-X / RT-H（2024）→ 跨机器人数据混合
   - OpenVLA（2024）→ 开源 7B 复现
   - π0 / π0.5（2024-2025）→ 通用机器人基础模型
-- **学习建议**：先精读论文 [2023-google-rt2](../../corpus/papers/vla/2023-google-rt2.md) 笔记，再看 [OpenVLA](../04-OpenVLA-7B-开源VLA/README.md) 的开源复现。
+- **学习建议**：先精读论文 [2023-brohan-rt2](../../corpus/papers/vla/2023-brohan-rt2.md) 笔记，再看 [OpenVLA](../04-OpenVLA-7B-开源VLA/README.md) 的开源复现。

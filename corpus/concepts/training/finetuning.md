@@ -36,7 +36,7 @@
 3. **场景特异**：你的实验室光照、桌面、物体与 OXE 不同，视觉分布偏移需微调修正。
 4. **任务语言**：你的指令模板（「把红色方块放进蓝碗」）与预训练措辞不同，需微调对齐。
 
-> 见 [`../../methods/vision-language-action.md`](../../methods/vision-language-action.md)、OpenVLA 论文 [`../../papers/vla/2024-openvla.md`](../../papers/vla/2024-openvla.md)——其核心实验就是「OXE 预训练 → 单任务微调」的消融。
+> 见 [`../../methods/vision-language-action.md`](../../methods/vision-language-action.md)、OpenVLA 论文 [`../../papers/vla/2024-kim-openvla.md`](../../papers/vla/2024-kim-openvla.md)——其核心实验就是「OXE 预训练 → 单任务微调」的消融。
 
 ---
 
@@ -161,7 +161,7 @@ $$
 
 - VLA 预训练-微调范式 → [`../../methods/vision-language-action.md`](../../methods/vision-language-action.md)
 - 模仿学习（微调常以 BC 为损失）→ [`../../methods/imitation-learning.md`](../../methods/imitation-learning.md)
-- OpenVLA（OXE 预训练 + LoRA 微调的标杆）→ [`../../papers/vla/2024-openvla.md`](../../papers/vla/2024-openvla.md)
+- OpenVLA（OXE 预训练 + LoRA 微调的标杆）→ [`../../papers/vla/2024-kim-openvla.md`](../../papers/vla/2024-kim-openvla.md)
 - 代表论文：
   - Hu et al., *LoRA: Low-Rank Adaptation of Large Language Models* (2021, arXiv:2106.09685)
   - OpenVLA, *Open-Source Vision-Language-Action Models* (2024, arXiv:2406.09246)
