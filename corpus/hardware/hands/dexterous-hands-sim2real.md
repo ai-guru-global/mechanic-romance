@@ -388,7 +388,7 @@ for step in range(steps):
 ## 9. 相关笔记
 
 - 单手：[allegro.md](allegro.md) · [leap-hand.md](leap-hand.md) · [shadow-hand.md](shadow-hand.md)
-- 专题：[全景](dexterous-hands-landscape.md) · [控制](dexterous-hands-control.md) · [数据采集](dexterous-hands-data-collection.md) · [算法](dexterous-hands-algorithms.md)
+- 专题：[全景](dexterous-hands-landscape.md) · [控制](dexterous-hands-control.md) · [数据采集](dexterous-hands-data-collection.md)
 - 概念：[sim-to-real](../../concepts/foundations/sim-to-real.md)
 - 仿真：[nvidia-isaac](../../simulation/platforms/nvidia-isaac.md) · [mujoco](../../simulation/platforms/mujoco.md) · [domain-randomization](../../simulation/sim-to-real/domain-randomization.md)
 - 触觉：[digit-tactile.md](../sensors/digit-tactile.md)

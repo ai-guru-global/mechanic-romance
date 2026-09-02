@@ -11,15 +11,15 @@
 | [`vla/`](vla/) | 视觉-语言-动作模型（RT-1/2/X、OpenVLA、Octo、π₀） | 🟡 充实中 |
 | [`diffusion-policy/`](diffusion-policy/) | 扩散/生成式策略（DP、DP3、EquiBot） | 🟡 充实中 |
 | [`imitation-learning/`](imitation-learning/) | 模仿学习方法（ACT、DAgger、GAIL、ALOHA） | ⚪ 待建 |
-| [`reinforcement-learning/`](reinforcement-learning/) | RL 方法（PPO/SAC 应用、Decision Transformer） | ⚪ 待建 |
-| [`world-models/`](world-models/) | 世界模型（Dreamer 系列、UniSim、Genie） | ⚪ 待建 |
-| [`foundation-models/`](foundation-models/) | 基础模型（PaLM-E、RT-X、LVM） | ⚪ 待建 |
-| [`manipulation/`](manipulation/) | 操作任务专项（抓取、装配、灵巧操作） | ⚪ 待建 |
-| [`navigation/`](navigation/) | 导航与探索（视觉导航、ObjectNav、探索策略） | ⚪ 待建 |
-| [`locomotion/`](locomotion/) | 运动控制（四足/人形行走、强化学习 locomotion） | ⚪ 待建 |
-| [`sim-to-real/`](sim-to-real/) | Sim-to-Real 迁移（域随机化、域适应） | ⚪ 待建 |
-| [`datasets-papers/`](datasets-papers/) | 数据集论文（OXE/RT-X、DROID、BridgeData） | ⚪ 待建 |
-| [`scaling/`](scaling/) | 数据/模型 scaling 与涌现（机器人 scaling law） | ⚪ 待建 |
+| `reinforcement-learning/` | RL 方法（PPO/SAC 应用、Decision Transformer） | ⚪ 待建 |
+| `world-models/` | 世界模型（Dreamer 系列、UniSim、Genie） | ⚪ 待建 |
+| `foundation-models/` | 基础模型（PaLM-E、RT-X、LVM） | ⚪ 待建 |
+| `manipulation/` | 操作任务专项（抓取、装配、灵巧操作） | ⚪ 待建 |
+| `navigation/` | 导航与探索（视觉导航、ObjectNav、探索策略） | ⚪ 待建 |
+| `locomotion/` | 运动控制（四足/人形行走、强化学习 locomotion） | ⚪ 待建 |
+| `sim-to-real/` | Sim-to-Real 迁移（域随机化、域适应） | ⚪ 待建 |
+| `datasets-papers/` | 数据集论文（OXE/RT-X、DROID、BridgeData） | ⚪ 待建 |
+| `scaling/` | 数据/模型 scaling 与涌现（机器人 scaling law） | ⚪ 待建 |
 
 ## 命名
 

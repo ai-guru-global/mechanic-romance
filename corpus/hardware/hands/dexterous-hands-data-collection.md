@@ -295,7 +295,7 @@ reward = -slip_prob  # 越少滑越好
 ## 7. 相关笔记
 
 - 单手：[allegro.md](allegro.md) · [leap-hand.md](leap-hand.md) · [shadow-hand.md](shadow-hand.md)
-- 专题：[全景](dexterous-hands-landscape.md) · [控制](dexterous-hands-control.md) · [Sim-to-Real](dexterous-hands-sim2real.md) · [算法](dexterous-hands-algorithms.md)
+- 专题：[全景](dexterous-hands-landscape.md) · [控制](dexterous-hands-control.md) · [Sim-to-Real](dexterous-hands-sim2real.md)
 - 方法：[imitation-learning](../../methods/imitation-learning.md) · [behavioral-cloning](../../methods/behavioral-cloning.md) · [dagger](../../methods/dagger.md) · [act](../../methods/act.md) · [diffusion-policy](../../methods/diffusion-policy.md)
 - 触觉：[digit-tactile.md](../sensors/digit-tactile.md)
 - Demo：[02-ACT-双手叠衣](../../../demo/scenarios/02-ACT-双手叠衣/README.md) · [08-灵巧手-五指旋转立方体](../../../demo/scenarios/08-灵巧手-五指旋转立方体/README.md)

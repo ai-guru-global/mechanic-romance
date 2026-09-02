@@ -256,7 +256,7 @@ slip_prob = lstm(sequence_of_features)  # 0-1
 
 ## 12. 相关笔记
 
-- 同类：[intel-realsense-d435.md](intel-realsense-d435.md) · [lidar-ouster-os1.md](lidar-ouster-os1.md)
+- 同类：[intel-realsense-d435.md](intel-realsense-d435.md)
 - 灵巧手：[../hands/dexterous-hands-landscape.md](../hands/dexterous-hands-landscape.md) · [../hands/dexterous-hands-data-collection.md](../hands/dexterous-hands-data-collection.md) · [../hands/dexterous-hands-sim2real.md](../hands/dexterous-hands-sim2real.md) · [leap-hand.md](../hands/leap-hand.md)
 - 概念：[../../concepts/mdp/observation-space.md](../../concepts/mdp/observation-space.md) · [../../concepts/perception/visual-representation.md](../../concepts/perception/visual-representation.md)
 - 仿真：[../../simulation/platforms/nvidia-isaac.md](../../simulation/platforms/nvidia-isaac.md)

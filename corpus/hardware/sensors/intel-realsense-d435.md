@@ -259,7 +259,7 @@ Isaac Sim → Replicator → Synthetic Data → D435 模型
 
 ## 11. 相关笔记
 
-- 同类：[digit-tactile.md](digit-tactile.md) · [lidar-ouster-os1.md](lidar-ouster-os1.md)
+- 同类：[digit-tactile.md](digit-tactile.md)
 - 计算平台：[../compute/nvidia-jetson-orin.md](../compute/nvidia-jetson-orin.md)
 - 仿真：[../../simulation/platforms/nvidia-isaac.md](../../simulation/platforms/nvidia-isaac.md) · [../../simulation/platforms/habitat.md](../../simulation/platforms/habitat.md)
 - 概念：[../../concepts/mdp/observation-space.md](../../concepts/mdp/observation-space.md) · [../../concepts/perception/visual-representation.md](../../concepts/perception/visual-representation.md)

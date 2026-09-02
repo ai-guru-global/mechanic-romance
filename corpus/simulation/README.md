@@ -9,9 +9,9 @@
 | 子目录 | 收录 | 状态 |
 | --- | --- | --- |
 | [`platforms/`](platforms/) | 仿真平台（Isaac Sim / Isaac Lab / MuJoCo / PyBullet / Genesis / Gazebo） | 🟡 充实中 |
-| [`assets/`](assets/) | 仿真资产（URDF / MJCF / USD 资产库、物体网格） | ⚪ 待建 |
+| `assets/` | 仿真资产（URDF / MJCF / USD 资产库、物体网格） | ⚪ 待建 |
 | [`sim-to-real/`](sim-to-real/) | Sim-to-Real 方法（域随机化 / 系统辨识 / 域适应） | ⚪ 待建 |
-| [`data-gen/`](data-gen/) | 仿真数据生成（合成演示、自动标注、无限数据） | ⚪ 待建 |
+| `data-gen/` | 仿真数据生成（合成演示、自动标注、无限数据） | ⚪ 待建 |
 
 ## 主流仿真平台对比（概览）
 

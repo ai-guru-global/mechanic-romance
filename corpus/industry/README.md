@@ -10,10 +10,10 @@
 | --- | --- | --- |
 | [`humanoid-overseas/`](humanoid-overseas/) | 海外人形（Figure / Tesla Optimus / 1X / Apptronik / Sanctuary） | 🟡 充实中 |
 | [`humanoid-china/`](humanoid-china/) | 国产人形（宇树 / 智元 / 银河通用 / 逐际动力 / 傅利叶 / 小米） | 🟡 充实中 |
-| [`arms-and-automation/`](arms-and-automation/)| 机械臂与自动化（KUKA / ABB / UR / 节卡 / 遨博） | ⚪ 待建 |
-| [`quadrupeds/`](quadrupeds/) | 四足（Boston Dynamics / 宇树 / 蔚来） | ⚪ 待建 |
+| `arms-and-automation/`| 机械臂与自动化（KUKA / ABB / UR / 节卡 / 遨博） | ⚪ 待建 |
+| `quadrupeds/` | 四足（Boston Dynamics / 宇树 / 蔚来） | ⚪ 待建 |
 | [`foundation-models/`](foundation-models/) | 具身大模型公司（Physical Intelligence / Skild / Covariant） | ⚪ 待建 |
-| [`supply-chain/`](supply-chain/) | 供应链（减速器/伺服/力矩传感器厂商） | ⚪ 待建 |
+| `supply-chain/` | 供应链（减速器/伺服/力矩传感器厂商） | ⚪ 待建 |
 
 ## 2024–2026 行业关键判断
 

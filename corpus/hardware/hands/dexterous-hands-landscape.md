@@ -168,7 +168,7 @@ LEAP Hand 出现（2023）打破 5 年价格壁垒，**研究民主化** 趋势�
 ## 7. 相关笔记
 
 - 单手笔记：[allegro.md](allegro.md) · [leap-hand.md](leap-hand.md) · [shadow-hand.md](shadow-hand.md)
-- 灵巧手专题：[control](dexterous-hands-control.md) · [data-collection](dexterous-hands-data-collection.md) · [sim2real](dexterous-hands-sim2real.md) · [algorithms](dexterous-hands-algorithms.md)
+- 灵巧手专题：[control](dexterous-hands-control.md) · [data-collection](dexterous-hands-data-collection.md) · [sim2real](dexterous-hands-sim2real.md)
 - 人形机器人：[figure-02.md](../humanoids/figure-02.md) · [unitree-h1.md](../humanoids/unitree-h1.md) · [tesla-optimus.md](../humanoids/tesla-optimus.md) · [1x-neo.md](../humanoids/1x-neo.md) · [unitree-g1.md](../humanoids/unitree-g1.md) · [agibot-a2.md](../humanoids/agibot-a2.md)
 - 四足：[boston-dynamics-spot.md](../quadrupeds/boston-dynamics-spot.md) · [unitree-go2.md](../quadrupeds/unitree-go2.md)
 - 仿真：[nvidia-isaac](../../simulation/platforms/nvidia-isaac.md) · [mujoco](../../simulation/platforms/mujoco.md)

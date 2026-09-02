@@ -9,10 +9,10 @@
 | 子目录 | 收录 | 状态 |
 | --- | --- | --- |
 | [`manipulation/`](manipulation/) | 操作基准（CALVIN / LIBERO / RLBench / BEHAVIOR-1K） | 🟢 已收录核心 |
-| [`navigation/`](navigation/) | 导航基准（HM3D / PointNav / ObjectNav） | ⚪ 待建 |
-| [`locomotion/`](locomotion/) | 运动控制基准（IsaacGymLoco / Legged Gym） | ⚪ 待建 |
+| `navigation/` | 导航基准（HM3D / PointNav / ObjectNav） | ⚪ 待建 |
+| `locomotion/` | 运动控制基准（IsaacGymLoco / Legged Gym） | ⚪ 待建 |
 | [`vla-eval/`](vla-eval/) | VLA 评测（真机评测协议 / RT-2 / OpenVLA） | 🟢 已收录核心 |
-| [`generalist/`](generalist/) | 通用基准（RT-X / BEHAVIOR / Habitat 多任务） | ⚪ 待建 |
+| `generalist/` | 通用基准（RT-X / BEHAVIOR / Habitat 多任务） | ⚪ 待建 |
 
 ## 基准的核心要素
 
