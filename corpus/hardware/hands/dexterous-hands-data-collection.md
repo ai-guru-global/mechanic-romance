@@ -302,6 +302,11 @@ reward = -slip_prob  # 越少滑越好
 
 ## 8. 参考
 
+**官方来源**：
+
+- LEAP Hand 官方站（DexCap 采集载体）（来源：https://leaphand.com/，访问于 2026-09-02）
+- Allegro Hand 官方站（Dactyl 采集载体）（来源：https://www.allegrohand.com/，访问于 2026-09-02）
+
 - Stanford ALOHA 论文（2023）
 - Stanford DexCap 论文（2024）
 - Mobile ALOHA（2024）

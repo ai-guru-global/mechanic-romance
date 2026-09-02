@@ -211,6 +211,10 @@
 
 ## 10. 参考链接
 
+**官方来源**：
+
+- 智元机器人官网（来源：https://www.agibot.com.cn/，访问于 2026-09-02）
+
 - 智元机器人官网：https://www.agibot.com/（或 agibot-intelligence.com）
 - 启元大模型 GO-1 发布（量子位）：https://www.qbitai.com/2025/03/262898.html
 - AgiBot World 数据集（开源）

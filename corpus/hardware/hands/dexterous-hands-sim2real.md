@@ -397,6 +397,11 @@ for step in range(steps):
 
 ## 10. 参考
 
+**官方来源**：
+
+- LEAP Hand 官方站（来源：https://leaphand.com/，访问于 2026-09-02）
+- DIGIT 触觉传感器开源接口仓库（Meta）（来源：https://github.com/facebookresearch/digit-interface，访问于 2026-09-02）
+
 - OpenAI Dactyl 论文（2018-2019）
 - LEAP Hand 论文（Stanford 2023）
 - DexCap 论文（Stanford 2024）

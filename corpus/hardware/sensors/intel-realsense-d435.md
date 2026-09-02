@@ -268,6 +268,10 @@ Isaac Sim → Replicator → Synthetic Data → D435 模型
 
 ## 12. 参考
 
+**官方来源**：
+
+- RealSense D435 官方产品页（RealSense 已自 Intel 独立）（来源：https://realsenseai.com/products/stereo-depth-camera-d435/，访问于 2026-09-02）
+
 - Intel RealSense 官方文档
 - librealsense2 GitHub
 - ROS2 realsense2_camera 包

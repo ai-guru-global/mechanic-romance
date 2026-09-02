@@ -312,6 +312,11 @@ while True:
 
 ## 11. 参考
 
+**官方来源**：
+
+- LEAP Hand 官方站（来源：https://leaphand.com/，访问于 2026-09-02）
+- Allegro Hand 官方站（来源：https://www.allegrohand.com/，访问于 2026-09-02）
+
 - EtherCAT 协议规范（ETG）
 - ROBOTIS Dynamixel SDK
 - igh EtherLab（开源主站）

@@ -259,6 +259,10 @@ Python 侧（`robotiq_driver`）可设 `position_mm`、`speed_mm_s`、`force_N`�
 
 ## 11. 参考链接
 
+**官方来源**：
+
+- Robotiq Adaptive Grippers 官方产品页（含 2F-85）（来源：https://robotiq.com/products/adaptive-grippers，访问于 2026-09-02）
+
 - Robotiq 官方（2F-85）：https://robotiq.com/products/2f85-2f140
 - Robotiq 2F-85/140 用户手册（官方 PDF）：https://robotiq.com/support
 - Robotiq URCaps（UR 集成）：https://robotiq.com/products/robotiq-urcaps

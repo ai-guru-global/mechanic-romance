@@ -292,6 +292,10 @@ nsys profile -o profile.qdrep python3 vla_inference.py
 
 ## 12. 参考
 
+**官方来源**：
+
+- NVIDIA Jetson Orin 官方产品页（来源：https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-orin/，访问于 2026-09-02）
+
 - NVIDIA Jetson 官方文档
 - JetPack 6.0 release notes
 - Isaac ROS GEM 列表

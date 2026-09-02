@@ -230,6 +230,10 @@ LEAP 论文报告的核心 Sim-to-Real 技巧：
 
 ## 11. 参考链接
 
+**官方来源**：
+
+- LEAP Hand 官方站（Stanford / WCRI）（来源：https://leaphand.com/，访问于 2026-09-02）
+
 - LEAP Hand 官网：https://leaphand.stanford.edu/
 - 论文（RSS 2023 Best Paper Finalist）：https://leaphand.stanford.edu/papers
 - GitHub（URDF / CAD / SDK）：https://github.com/leap-hand

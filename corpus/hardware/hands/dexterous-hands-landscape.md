@@ -174,3 +174,13 @@ LEAP Hand 出现（2023）打破 5 年价格壁垒，**研究民主化** 趋势�
 - 仿真：[nvidia-isaac](../../simulation/platforms/nvidia-isaac.md) · [mujoco](../../simulation/platforms/mujoco.md)
 - 方法：[reinforcement-learning](../../methods/reinforcement-learning.md) · [diffusion-policy](../../methods/diffusion-policy.md) · [imitation-learning](../../methods/imitation-learning.md)
 - Demo：[08-灵巧手-五指旋转立方体](../../demo/scenarios/08-灵巧手-五指旋转立方体/README.md)
+
+---
+
+## 8. 参考
+
+**官方来源**：
+
+- LEAP Hand 官方站（来源：https://leaphand.com/，访问于 2026-09-02）
+- Allegro Hand 官方站（来源：https://www.allegrohand.com/，访问于 2026-09-02）
+- Shadow Dexterous Hand 官方产品系列页（来源：https://shadowrobot.com/dexterous-hand-series/，访问于 2026-09-02）

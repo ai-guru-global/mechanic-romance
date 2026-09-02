@@ -231,6 +231,10 @@ RL 控制（Isaac Lab 训练）
 
 ## 12. 参考
 
+**官方来源**：
+
+- Unitree G1 官方产品页（来源：https://www.unitree.com/g1，访问于 2026-09-02）
+
 - 宇树科技官网
 - G1 发布视频（B 站 / YouTube）
 - 宇树 G1 SDK 文档

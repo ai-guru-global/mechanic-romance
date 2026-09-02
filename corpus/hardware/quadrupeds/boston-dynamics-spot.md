@@ -231,6 +231,10 @@ Spot SDK（Python / C++ / ROS2）
 
 ## 12. 参考
 
+**官方来源**：
+
+- Boston Dynamics Spot 官方产品页（来源：https://bostondynamics.com/products/spot/，访问于 2026-09-02）
+
 - Boston Dynamics 官网
 - Spot SDK 文档
 - Spot 应用视频（YouTube / 官网）

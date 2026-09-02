@@ -247,6 +247,10 @@ pub.publish(target)
 
 ## 12. 参考
 
+**官方来源**：
+
+- KUKA LBR iiwa 官方产品页（来源：https://www.kuka.com/en-de/products/robot-systems/industrial-robots/lbr-iiwa，访问于 2026-09-02）
+
 - KUKA LBR iiwa 官方
 - KUKA Sunrise 文档
 - iiwa_stack GitHub

@@ -212,6 +212,10 @@ Figure 的官方叙事是「**通用人类劳动力（general-purpose humanoid w
 
 ## 10. 参考链接
 
+**官方来源**：
+
+- Figure 官方公告：Figure 02 进入 BMW 产线试点（独立产品页已下线）（来源：https://www.figure.ai/news/production-at-bmw，访问于 2026-09-02）
+
 > 以下链接为公开信息来源，部分为媒体报道，**非全部为官方一手资料**，引用时注意区分。
 
 - Figure AI 官网：https://www.figure.ai/

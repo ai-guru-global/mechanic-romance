@@ -229,6 +229,10 @@ UR 的第三方生态是协作机器人里**最庞大**的：Robotiq、OnRobot�
 
 ## 11. 参考链接
 
+**官方来源**：
+
+- Universal Robots UR5e 技术规格表（官方手册）（来源：https://www.universal-robots.com/manuals/EN/HTML/SW5_19/Content/prod-usr-man/complianceUR5e/H_g5_sections/appendix_g5/tech_spec_sheet.htm，访问于 2026-09-02）
+
 - Universal Robots 官方：https://www.universal-robots.com/products/ur5-robot/
 - UR5e 技术参数（官方 PDF）：https://www.universal-robots.com/articles/ur/technical-specifications-ur5e/
 - RTDE 协议文档：https://www.universal-robots.com/articles/ur/interface-communication/real-time-data-exchange-rtde-guide/

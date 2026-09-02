@@ -186,6 +186,10 @@ B2C 家庭服务机器人
 
 ## 11. 参考
 
+**官方来源**：
+
+- 1X NEO 官方产品页（来源：https://www.1x.tech/neo，访问于 2026-09-02）
+
 - 1X Technologies 官方
 - Neo Beta 发布视频（2024-08）
 - OpenAI 投资 1X 公告

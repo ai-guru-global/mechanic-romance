@@ -191,6 +191,10 @@ Physical Intelligence 的资本号召力在具身大模型赛道顶级：
 
 ## 9. 参考链接
 
+**官方来源**：
+
+- Physical Intelligence 官网（来源：https://www.pi.website/，访问于 2026-09-02）
+
 > 部分为媒体报道，**非全部为官方一手资料**，引用时注意区分。
 
 - Physical Intelligence 官网：https://www.pi.website/

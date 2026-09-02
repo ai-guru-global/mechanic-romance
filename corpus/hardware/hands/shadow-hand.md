@@ -212,6 +212,10 @@ env = ShadowHandCubeEnv(
 
 ## 10. 参考链接
 
+**官方来源**：
+
+- Shadow Dexterous Hand 官方产品系列页（来源：https://shadowrobot.com/dexterous-hand-series/，访问于 2026-09-02）
+
 - Shadow Robot 官方：https://www.shadowrobot.com/
 - 论文：Shadow Dexterous Hand 系列（2005+）
 - OpenAI Dactyl（2018-2019）：https://openai.com/blog/learning-dexterity/

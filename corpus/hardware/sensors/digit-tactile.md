@@ -264,6 +264,10 @@ slip_prob = lstm(sequence_of_features)  # 0-1
 
 ## 13. 参考
 
+**官方来源**：
+
+- DIGIT 触觉传感器开源接口仓库（Meta）（来源：https://github.com/facebookresearch/digit-interface，访问于 2026-09-02）
+
 - Meta DIGIT 论文（2020-06）：https://arxiv.org/abs/2005.14679
 - DIGIT 开源仓库：https://github.com/facebookresearch/DIGIT
 - 触觉综述：https://arxiv.org/abs/2401.05000

@@ -210,6 +210,10 @@ $30k     $20k     $8.5k    $1.6k
 
 ## 11. 参考
 
+**官方来源**：
+
+- Unitree Go2 官方产品页（来源：https://www.unitree.com/mobile/go2，访问于 2026-09-02）
+
 - 宇树科技官网
 - Go2 发布视频（YouTube / B 站）
 - Go2 SDK 文档

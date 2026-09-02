@@ -192,6 +192,10 @@ Optimus **不依赖 LiDAR**，只用 8 路 RGB 相机 + FSD 视觉模型：
 
 ## 10. 参考
 
+**官方来源**：
+
+- Tesla AI 官方页（Optimus 归属板块）（来源：https://www.tesla.com/AI，访问于 2026-09-02）
+
 - Tesla AI Day 2021-2022
 - Tesla 投资者日 2023-2024
 - Optimus 官方视频（YouTube）

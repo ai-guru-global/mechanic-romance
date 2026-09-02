@@ -221,6 +221,10 @@ Panda 是仿真器里模型最齐全的本体之一，这是它成为 sim-to-rea
 
 ## 10. 参考链接
 
+**官方来源**：
+
+- Franka Robotics 官方产品页（Panda 产品页已下线，由后继型号 FR3 承接）（来源：https://franka.de/franka-research-3，访问于 2026-09-02）
+
 - Franka Emika 官方文档（FCI / libfranka / franka_ros）：https://frankaemika.github.io/docs/
 - `libfranka` GitHub：https://github.com/frankaemika/libfranka
 - `franka_ros2`：https://github.com/frankaemika/franka_ros2

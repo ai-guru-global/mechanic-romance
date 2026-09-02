@@ -240,6 +240,10 @@ H1 在以下仿真器都有官方或社区高保真模型，是 sim-to-real 闭�
 
 ## 10. 参考链接
 
+**官方来源**：
+
+- Unitree H1 官方产品页（来源：https://www.unitree.com/h1，访问于 2026-09-02）
+
 - Unitree 官方（H1）：https://www.unitree.com/h1/
 - Unitree H1 技术参数（官方 PDF）
 - `unitree_sdk2`（C++）：https://github.com/unitreerobotics/unitree_sdk2

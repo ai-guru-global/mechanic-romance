@@ -230,6 +230,10 @@ for t in range(200):
 
 ## 10. 参考链接
 
+**官方来源**：
+
+- Allegro Hand 官方站（来源：https://www.allegrohand.com/，访问于 2026-09-02）
+
 - Wonik Robotics 官方：https://www.wonikrobotics.com/
 - 官方 SDK：https://github.com/SimLab-Research/allegro_hand_ros
 - Isaac Lab Allegro 任务：https://github.com/NVlabs/IsaacLab

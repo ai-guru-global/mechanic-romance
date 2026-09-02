@@ -191,6 +191,10 @@
 
 ## 9. 参考链接
 
+**官方来源**：
+
+- 宇树科技官网（来源：https://www.unitree.com/，访问于 2026-09-02）
+
 - 宇树科技官网：https://www.unitree.com/
 - Unitree H1 产品页：https://www.unitree.com/h1/
 - Unitree G1 产品页：https://www.unitree.com/g1/
