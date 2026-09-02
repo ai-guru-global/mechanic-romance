@@ -16,11 +16,13 @@
 | 维度 | 数字 |
 | --- | --- |
 | 📚 **方法笔记** | 10 篇（IL / RL / DP / ACT / VLA / VLN / PPO / SAC / DAgger / BC） |
-| 🔧 **硬件笔记** | 8 个（Franka / UR / Robotiq / Allegro / LEAP / Shadow / Figure 02 / H1） |
-| 🎮 **仿真平台** | 5 个（Isaac Lab / Habitat / MuJoCo / PyBullet / Genesis） |
+| 🔧 **硬件笔记** | 22 篇（机械臂 / 人形 / 灵巧手 / 末端执行器 / 四足 / 传感器 / 计算） |
+| 🎮 **仿真笔记** | 6 篇（Isaac Lab / Habitat / MuJoCo / PyBullet / Genesis + Sim-to-Real） |
+| 💡 **概念笔记** | 13 篇（具身基础 / MDP / 感知 / 训练） |
 | 🧪 **Demo 场景** | **8 场**（覆盖 IL / RL / VLA / 导航 / 灵巧手 8 大类） |
 | 📄 **核心论文笔记** | 4 篇（Diffusion Policy / ACT / RT-2 / OpenVLA） |
-| 🧭 **研究里程碑** | M0-M1 ✅ · M2 🟡 · M3-M4 ⚪ |
+| 🏢 **行业 / 基准** | 5 家公司图谱 + 5 个评测基准 |
+| 🧭 **研究里程碑** | M0-M1 ✅ · M2 🟡 · M3-M4 ⚪（进度以 [docs/roadmap.md](docs/roadmap.md) 为准） |
 
 ---
 
@@ -81,7 +83,7 @@ mechanic-romance/
 │   │   ├── act.md                  ← 双手操作范式
 │   │   ├── vision-language-action.md
 │   │   └── vision-language-navigation.md
-│   ├── hardware/           ← 8 类硬件
+│   ├── hardware/           ← 22 篇硬件笔记
 │   │   ├── arms/                   ← Franka / UR / KUKA
 │   │   ├── humanoids/              ← Figure 02 / H1
 │   │   ├── hands/                  ← Allegro / LEAP / Shadow
@@ -95,7 +97,9 @@ mechanic-romance/
 │   │   └── training/               ← 微调
 │   ├── papers/             ← 论文笔记（按方法分类）
 │   ├── datasets/           ← 数据集笔记
-│   └── benchmarks/         ← 评测基准
+│   ├── benchmarks/         ← 评测基准
+│   ├── industry/           ← 行业公司图谱
+│   └── surveys/            ← 综述 / 报告
 │
 ├── 🎬 demo/                ← 8 个 Demo 场景
 │   ├── scenarios/                 ← 场景定义（核心）
@@ -104,12 +108,14 @@ mechanic-romance/
 │
 ├── 🔬 research/            ← 研究过程留痕
 │   ├── proposals/                 ← 课题提案
-│   ├── readings/                  ← 阅读笔记
+│   ├── notes/                     ← 阅读笔记
 │   └── experiments/               ← 实验记录
 │
-└── 📖 docs/                ← 项目级文档
-    ├── roadmap.md                 ← 研究路线图
-    └── conventions.md             ← 写作约定
+├── 📖 docs/                ← 项目级文档
+│   ├── roadmap.md                 ← 研究路线图（进度唯一事实源）
+│   └── conventions.md             ← 写作约定
+│
+└── 🗄 archive/             ← 旧项目归档（Piroom，勿动）
 ```
 
 ---
@@ -263,20 +269,22 @@ cat demo/scenarios/01-扩散策略-桌面堆叠/README.md
 
 ## 📊 仓库统计
 
-> 最后更新：2026-08-05
+> 最后更新：2026-09-02
 
 ```
 corpus/
 ├── methods/        10 篇
-├── hardware/        8 个分类
-├── simulation/      5 个平台
-├── concepts/       13 个概念
+├── hardware/       22 篇（7 类）
+├── simulation/      6 篇（5 平台 + Sim-to-Real）
+├── concepts/       13 篇
 ├── papers/          4 篇笔记
 ├── datasets/        1 个数据集
-└── benchmarks/      6 个评测基准
+├── benchmarks/      5 个评测基准
+├── industry/        5 家公司
+└── surveys/         1 篇综述
 
 demo/
-└── scenarios/       8 场 Demo
+└── scenarios/       8 场 Demo（设计文档）
 ```
 
 ---

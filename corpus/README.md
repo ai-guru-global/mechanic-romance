@@ -8,10 +8,10 @@
 
 | 板块 | 收录 | 入口 | 完成度 |
 | --- | --- | --- | --- |
-| `concepts/` | **基础概念**（是什么） | [`concepts/`](concepts/README.md) | 🟡 15 篇 |
-| `methods/` | **方法 / 算法**（怎么做） | [`methods/`](methods/README.md) | 🟡 5 篇 |
-| `hardware/` | 硬件本体 / 传感器 / 执行器 | [`hardware/`](hardware/README.md) | 🟡 5 篇 |
-| `simulation/` | 仿真平台 / Sim-to-Real | [`simulation/`](simulation/README.md) | 🟡 5 篇 |
+| `concepts/` | **基础概念**（是什么） | [`concepts/`](concepts/README.md) | 🟢 13 篇 |
+| `methods/` | **方法 / 算法**（怎么做） | [`methods/`](methods/README.md) | 🟡 10 篇 |
+| `hardware/` | 硬件本体 / 传感器 / 执行器 | [`hardware/`](hardware/README.md) | 🟢 22 篇 |
+| `simulation/` | 仿真平台 / Sim-to-Real | [`simulation/`](simulation/README.md) | 🟡 6 篇 |
 | `benchmarks/` | 基准测试与评测协议 | [`benchmarks/`](benchmarks/README.md) | 🟡 5 篇 |
 | `papers/` | 论文笔记（核心产出） | [`papers/`](papers/README.md) | 🟡 4 篇 |
 | `datasets/` | 数据集说明 | [`datasets/`](datasets/README.md) | 🟡 1 篇 |
@@ -33,6 +33,6 @@
 
 ## 当前规模
 
-- **实质内容文件**：≈ 46 篇（持续扩充中）
-- **更新日期**：2026-08-04
+- **实质内容文件**：67 篇（持续扩充中）
+- **更新日期**：2026-09-02
 - **下一步**：见 [`docs/roadmap.md`](../docs/roadmap.md)
