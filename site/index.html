@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>机械浪漫 · Mechanic Romance — 具身智能研究语料库</title>
+<meta name="description" content="面向具身智能（Embodied AI）研究的开源语料库 + Demo 场景工作台：67 篇结构化研究笔记，8 个可讲解的场景设计，诚实标注研究状态。">
+<style>
+  :root {
+    --ink: #1c1917;
+    --ink-soft: #57534e;
+    --ink-faint: #a8a29e;
+    --accent: #9a3412;
+    --accent-soft: #c2410c;
+    --bg: #faf9f7;
+    --surface: #ffffff;
+    --line: #e7e5e4;
+    --line-soft: #f0efed;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+
+  /* ---- hero ---- */
+  .hero { padding: 96px 0 72px; border-bottom: 1px solid var(--line); }
+  .hero-kicker {
+    font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--accent); font-weight: 600; margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-size: clamp(34px, 6vw, 56px); font-weight: 800;
+    letter-spacing: -0.02em; line-height: 1.15; margin-bottom: 8px;
+  }
+  .hero h1 .en { color: var(--ink-faint); font-weight: 300; }
+  .hero .tagline {
+    font-size: clamp(17px, 2.4vw, 21px); color: var(--ink-soft);
+    margin-top: 20px; max-width: 640px;
+  }
+  .hero .tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+  .tag {
+    display: inline-block; font-size: 13px; padding: 5px 14px;
+    border: 1px solid var(--line); border-radius: 999px;
+    background: var(--surface); color: var(--ink-soft);
+  }
+  .tag.done { border-color: #bbf7d0; background: #f0fdf4; color: #166534; }
+  .tag.doing { border-color: #fde68a; background: #fffbeb; color: #92400e; }
+  .hero .cta { margin-top: 36px; display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn {
+    display: inline-block; padding: 12px 28px; border-radius: 8px;
+    font-size: 15px; font-weight: 600; text-decoration: none;
+    transition: opacity .15s ease;
+  }
+  .btn:hover { opacity: .85; }
+  .btn-primary { background: var(--ink); color: #fff; }
+  .btn-ghost { border: 1px solid var(--line); color: var(--ink); background: var(--surface); }
+
+  /* ---- sections ---- */
+  section { padding: 64px 0; }
+  section + section { border-top: 1px solid var(--line); }
+  .sec-label {
+    font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--accent); font-weight: 600; margin-bottom: 10px;
+  }
+  .sec-title { font-size: clamp(22px, 3.4vw, 30px); font-weight: 700; letter-spacing: -0.01em; margin-bottom: 14px; }
+  .sec-desc { color: var(--ink-soft); max-width: 680px; margin-bottom: 36px; }
+
+  /* ---- what ---- */
+  .what-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .what-card {
+    background: var(--surface); border: 1px solid var(--line);
+    border-radius: 12px; padding: 26px 24px;
+  }
+  .what-card h3 { font-size: 17px; font-weight: 700; margin-bottom: 8px; }
+  .what-card h3 span { color: var(--accent); margin-right: 8px; font-variant-numeric: tabular-nums; }
+  .what-card p { font-size: 14.5px; color: var(--ink-soft); }
+
+  /* ---- corpus numbers ---- */
+  .num-grid { display: grid; grid-template-columns: repeat(9, 1fr); gap: 12px; }
+  .num-card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px 8px; text-align: center; }
+  .num-card .n { font-size: 26px; font-weight: 800; font-variant-numeric: tabular-nums; letter-spacing: -0.02em; }
+  .num-card .t { font-size: 12.5px; color: var(--ink-soft); margin-top: 2px; }
+  .num-note { font-size: 13.5px; color: var(--ink-faint); margin-top: 16px; }
+
+  /* ---- scenarios ---- */
+  .scene-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  .scene-card {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
+    padding: 18px 16px; display: flex; flex-direction: column; gap: 6px;
+  }
+  .scene-card .no { font-size: 12px; color: var(--accent); font-weight: 700; letter-spacing: 0.1em; }
+  .scene-card .name { font-size: 15px; font-weight: 700; line-height: 1.4; }
+  .scene-card .method { font-size: 12.5px; color: var(--ink-soft); }
+  .scene-card .cat {
+    font-size: 11.5px; color: var(--ink-faint); margin-top: auto;
+    padding-top: 8px; border-top: 1px dashed var(--line-soft);
+  }
+  .scene-note {
+    margin-top: 22px; padding: 16px 20px; border-left: 3px solid var(--accent);
+    background: var(--surface); border-radius: 0 10px 10px 0;
+    font-size: 14px; color: var(--ink-soft);
+  }
+  .scene-note strong { color: var(--ink); }
+
+  /* ---- topics ---- */
+  .topic-table { width: 100%; border-collapse: collapse; font-size: 14.5px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+  .topic-table th {
+    text-align: left; font-size: 12.5px; letter-spacing: 0.06em; color: var(--ink-faint);
+    font-weight: 600; padding: 12px 16px; border-bottom: 1px solid var(--line);
+    background: #fcfbfa;
+  }
+  .topic-table td { padding: 12px 16px; border-bottom: 1px solid var(--line-soft); }
+  .topic-table tr:last-child td { border-bottom: none; }
+  .topic-table td:first-child { font-weight: 600; white-space: nowrap; }
+  .topic-table td.mono { color: var(--ink-soft); font-size: 13.5px; }
+
+  /* ---- honesty ---- */
+  .honest { background: #f5f4f1; }
+  .roadmap-table { width: 100%; border-collapse: collapse; font-size: 14.5px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+  .roadmap-table th { text-align: left; font-size: 12.5px; letter-spacing: 0.06em; color: var(--ink-faint); font-weight: 600; padding: 12px 16px; border-bottom: 1px solid var(--line); background: #fcfbfa; }
+  .roadmap-table td { padding: 12px 16px; border-bottom: 1px solid var(--line-soft); }
+  .roadmap-table tr:last-child td { border-bottom: none; }
+  .pill { display: inline-block; font-size: 12px; font-weight: 600; padding: 2px 10px; border-radius: 999px; white-space: nowrap; }
+  .pill-done { background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; }
+  .pill-doing { background: #fffbeb; color: #92400e; border: 1px solid #fde68a; }
+  .pill-todo { background: var(--bg); color: var(--ink-faint); border: 1px solid var(--line); }
+  .honest-quote {
+    margin-top: 28px; font-size: 15.5px; color: var(--ink); line-height: 1.9;
+  }
+  .honest-quote em { color: var(--accent); font-style: normal; font-weight: 600; }
+
+  /* ---- footer ---- */
+  footer { border-top: 1px solid var(--line); padding: 56px 0 64px; }
+  .footer-quote { font-size: 17px; color: var(--ink); font-weight: 600; margin-bottom: 28px; }
+  .footer-meta { display: flex; flex-wrap: wrap; gap: 8px 32px; font-size: 14px; color: var(--ink-soft); }
+  .footer-meta a { color: var(--accent); text-decoration: none; }
+  .footer-meta a:hover { text-decoration: underline; }
+  .footer-fine { margin-top: 32px; font-size: 12.5px; color: var(--ink-faint); }
+
+  a.textlink { color: var(--accent); text-decoration: none; }
+  a.textlink:hover { text-decoration: underline; }
+
+  /* ---- responsive ---- */
+  @media (max-width: 900px) {
+    .what-grid { grid-template-columns: 1fr; }
+    .num-grid { grid-template-columns: repeat(3, 1fr); }
+    .scene-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 520px) {
+    .hero { padding: 64px 0 52px; }
+    .num-grid { grid-template-columns: repeat(3, 1fr); }
+    .scene-grid { grid-template-columns: 1fr; }
+    section { padding: 48px 0; }
+    .table-wrap { overflow-x: auto; }
+    .topic-table, .roadmap-table { min-width: 560px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="container">
+    <p class="hero-kicker">Embodied AI Research Corpus</p>
+    <h1>机械浪漫<br><span class="en">Mechanic Romance</span></h1>
+    <p class="tagline">把冰冷的机械、数据与算法，组织成可被理解、可被复现、可被讨论的研究语言。</p>
+    <div class="tags">
+      <span class="tag done">M0 骨架 · 完成</span>
+      <span class="tag done">M1 语料 67 篇 · 完成</span>
+      <span class="tag doing">M2 场景定义 · 进行中</span>
+      <span class="tag">中文 + 英文术语</span>
+    </div>
+    <div class="cta">
+      <a class="btn btn-primary" href="https://github.com/ai-guru-global/mechanic-romance" target="_blank" rel="noopener">查看 GitHub 仓库</a>
+      <a class="btn btn-ghost" href="#scenarios">浏览 8 个场景</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section id="what">
+  <div class="container">
+    <p class="sec-label">What &amp; Why</p>
+    <h2 class="sec-title">这不是另一个 GitHub 仓库</h2>
+    <p class="sec-desc">论文在 arXiv，代码在 GitHub，笔记在 Notion——传统研究资料被拆成三个孤岛。机械浪漫把「方法 · 硬件 · 仿真 · 场景」组织进同一套互相链接的语料体系。</p>
+    <div class="what-grid">
+      <div class="what-card">
+        <h3><span>01</span>可检索的语料库</h3>
+        <p>方法、硬件、仿真、概念、论文、基准笔记互相链接，每篇标注参考来源与访问日期，一句话原则：看完即懂，讲完即用。</p>
+      </div>
+      <div class="what-card">
+        <h3><span>02</span>可讲解的场景工作台</h3>
+        <p>把抽象的 SOTA 数字拆成说得清的任务、观测、动作与评估协议——8 大类具身操作各有一份统一模板的场景设计。</p>
+      </div>
+      <div class="what-card">
+        <h3><span>03</span>可回放的研究日志</h3>
+        <p>从选题提案到实验记录全程留痕，研究路线图公开可查，每个里程碑的状态、口径与完成日期透明可审计。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="corpus">
+  <div class="container">
+    <p class="sec-label">Corpus</p>
+    <h2 class="sec-title">67 篇结构化研究笔记</h2>
+    <p class="sec-desc">九个类别的语料沉淀，覆盖具身智能研究的主要脉络：从学习范式与硬件本体，到仿真平台与行业格局。</p>
+    <div class="num-grid">
+      <div class="num-card"><div class="n">10</div><div class="t">方法笔记</div></div>
+      <div class="num-card"><div class="n">22</div><div class="t">硬件笔记</div></div>
+      <div class="num-card"><div class="n">6</div><div class="t">仿真平台</div></div>
+      <div class="num-card"><div class="n">13</div><div class="t">概念笔记</div></div>
+      <div class="num-card"><div class="n">4</div><div class="t">核心论文</div></div>
+      <div class="num-card"><div class="n">5</div><div class="t">评测基准</div></div>
+      <div class="num-card"><div class="n">5</div><div class="t">公司图谱</div></div>
+      <div class="num-card"><div class="n">1</div><div class="t">数据集</div></div>
+      <div class="num-card"><div class="n">1</div><div class="t">综述</div></div>
+    </div>
+    <p class="num-note">全部笔记遵循统一写作约定，参考节与「待核实」标注体例一致。数字与仓库同步，详见 <a class="textlink" href="https://github.com/ai-guru-global/mechanic-romance#仓库统计" target="_blank" rel="noopener">GitHub 仓库统计</a>。</p>
+  </div>
+</section>
+
+<section id="scenarios">
+  <div class="container">
+    <p class="sec-label">Demo Scenarios</p>
+    <h2 class="sec-title">8 个 Demo 场景</h2>
+    <p class="sec-desc">每个场景用统一模板定义任务、观测、动作、评估、硬件——可复现、可比较、可讲解。</p>
+    <div class="scene-grid">
+      <div class="scene-card"><span class="no">01 · 单臂 IL</span><span class="name">扩散策略 · 桌面堆叠</span><span class="method">Diffusion Policy</span><span class="cat">推方块到目标点</span></div>
+      <div class="scene-card"><span class="no">02 · 双手 IL</span><span class="name">ACT · 双手叠衣</span><span class="method">Action Chunking Transformer</span><span class="cat">双手叠毛巾</span></div>
+      <div class="scene-card"><span class="no">03 · VLA</span><span class="name">RT-2 · 指令分拣</span><span class="method">RT-2（VLM + 动作 token）</span><span class="cat">听自然语言指令分拣</span></div>
+      <div class="scene-card"><span class="no">04 · 开源 VLA</span><span class="name">OpenVLA · 7B 复现</span><span class="method">OpenVLA-7B + BridgeData</span><span class="cat">桌面倒水</span></div>
+      <div class="scene-card"><span class="no">05 · 商用人形</span><span class="name">Figure 02 · 端到端人形</span><span class="method">Helix（双系统 VLA）</span><span class="cat">开冰箱拿可乐</span></div>
+      <div class="scene-card"><span class="no">06 · 强化学习</span><span class="name">Franka · 抓杯</span><span class="method">PPO + Isaac Lab</span><span class="cat">仿真中学会抓杯</span></div>
+      <div class="scene-card"><span class="no">07 · 导航</span><span class="name">VLN-CE · 视觉语言导航</span><span class="method">HAMT + Habitat</span><span class="cat">3D 室内听指令导航</span></div>
+      <div class="scene-card"><span class="no">08 · 灵巧手</span><span class="name">五指旋转立方体</span><span class="method">PPO + Allegro/LEAP</span><span class="cat">立方体掌心旋转</span></div>
+    </div>
+    <div class="scene-note">
+      <strong>状态诚实声明：</strong>当前 8 个场景均为设计文档，仓库内暂无可运行的训练 / 评估脚本；首个场景的最小可跑复现按路线图随 M3「实验复现」落地。每个场景 README 中标注了对应方法的官方实现入口。
+    </div>
+  </div>
+</section>
+
+<section id="topics">
+  <div class="container">
+    <p class="sec-label">Coverage</p>
+    <h2 class="sec-title">8 大研究主题全覆盖</h2>
+    <div class="table-wrap">
+      <table class="topic-table">
+        <thead><tr><th>主题</th><th>核心问题</th><th>代表方法</th><th>对应场景</th></tr></thead>
+        <tbody>
+          <tr><td>单臂操作</td><td>如何抓放物体？</td><td class="mono">BC / DP / VLA</td><td class="mono">01 · 03 · 04 · 06</td></tr>
+          <tr><td>双手操作</td><td>如何协调双臂？</td><td class="mono">ACT / Mobile ALOHA</td><td class="mono">02</td></tr>
+          <tr><td>人形机器人</td><td>通用身体如何决策？</td><td class="mono">Helix / π₀ / GO-1</td><td class="mono">05</td></tr>
+          <tr><td>灵巧手</td><td>5 指能做什么？</td><td class="mono">PPO / DDEX / DexCap</td><td class="mono">08</td></tr>
+          <tr><td>导航</td><td>如何听懂指令走路？</td><td class="mono">HAMT / DUET / NaVid</td><td class="mono">07</td></tr>
+          <tr><td>基础模型</td><td>一个模型统治一切？</td><td class="mono">RT-2 / OpenVLA / π₀</td><td class="mono">03 · 04 · 05</td></tr>
+          <tr><td>学习范式</td><td>演示 / 试错 / 纠错？</td><td class="mono">IL / RL / DAgger</td><td class="mono">跨 8 场景</td></tr>
+          <tr><td>Sim-to-Real</td><td>仿真能迁到真机吗？</td><td class="mono">域随机化 / 系统辨识</td><td class="mono">跨 6 场景</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="honesty" class="honest">
+  <div class="container">
+    <p class="sec-label">Honest Status</p>
+    <h2 class="sec-title">研究状态，透明可查</h2>
+    <p class="sec-desc">本项目的原则之一是诚实标注：设计文档就明说是设计文档，没有佐证的前瞻推测标「待核实」。进度以仓库内 roadmap 为唯一事实源。</p>
+    <div class="table-wrap">
+      <table class="roadmap-table">
+        <thead><tr><th>阶段</th><th>目标</th><th>状态</th></tr></thead>
+        <tbody>
+          <tr><td>M0 · 骨架</td><td>建立语料库与场景项目结构</td><td><span class="pill pill-done">完成</span></td></tr>
+          <tr><td>M1 · 语料沉淀</td><td>方法 / 硬件 / 仿真 / 概念 / 基准 / 行业语料 67 篇</td><td><span class="pill pill-done">完成</span></td></tr>
+          <tr><td>M2 · 场景定义</td><td>8 大类 8 个场景定义；首个场景推进到最小可跑复现</td><td><span class="pill pill-doing">进行中 · 8 份定义已起草</span></td></tr>
+          <tr><td>M3 · 实验复现</td><td>复现 1 个基线方法并记录结果</td><td><span class="pill pill-todo">待开始</span></td></tr>
+          <tr><td>M4 · 阶段总结</td><td>输出阶段性研究报告 / Demo 视频</td><td><span class="pill pill-todo">待开始</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="honest-quote">机器没有浪漫，但<em>研究机器的过程可以</em>——把一篇论文读懂容易，把它讲给别人听很难；把一个方法跑通容易，把「为什么跑得通」讲清楚很难。这个项目追求的，是把难的东西组织得清晰。</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <p class="footer-quote">「机器没有浪漫，但研究机器的人，可以有。」</p>
+    <div class="footer-meta">
+      <span>作者 Allen Galler（法喜）</span>
+      <a href="https://github.com/ai-guru-global/mechanic-romance" target="_blank" rel="noopener">GitHub · mechanic-romance</a>
+      <a href="mailto:allengaller@qq.com">allengaller@qq.com</a>
+      <a href="https://allengaller.github.io" target="_blank" rel="noopener">个人站</a>
+    </div>
+    <p class="footer-fine">页面数据与 GitHub 仓库同步 · 语料库以 CC 署名方式引用 · 最后更新 2026-09-03</p>
+  </div>
+</footer>
+
+</body>
+</html>
