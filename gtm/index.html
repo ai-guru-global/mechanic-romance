@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>机械浪漫 Mechanic Romance · 具身智能研究语料库与场景工作台</title>
+<meta name="description" content="机械浪漫（Mechanic Romance）：面向具身智能研究的开源语料库 + Demo 场景工作台。67 篇方法/硬件/仿真/概念语料，8 大类 Demo 场景，8 大研究主题——把论文拆成说得清的任务与评估。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700;800;900&family=Barlow+Condensed:wght@500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a141f; --bg2:#0c1927;
+  --panel:#102133; --panel2:#0d1b2b;
+  --line:rgba(148,196,228,.16); --line2:rgba(148,196,228,.09);
+  --ink:#e9f1f8; --ink2:#a9bccd; --ink3:#7e93a8;
+  --rose:#ff5f76; --rose2:#ff8b9b;
+  --cyan:#5fb8d4;
+  --ok:#3fb950; --warn:#ffc94d; --idle:#5c6f84;
+  --mono:'JetBrains Mono',ui-monospace,monospace;
+  --cond:'Barlow Condensed','Noto Sans SC',sans-serif;
+  --disp:'Barlow','Noto Sans SC',sans-serif;
+  --body:'Noto Sans SC','Barlow',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);color:var(--ink);font-family:var(--body);
+  font-size:16px;line-height:1.75;
+  background-image:
+    linear-gradient(var(--line2) 1px,transparent 1px),
+    linear-gradient(90deg,var(--line2) 1px,transparent 1px);
+  background-size:56px 56px;
+}
+::selection{background:var(--rose);color:#0a141f}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--rose);outline-offset:3px;border-radius:2px}
+.skip{position:absolute;left:-999px;top:8px;z-index:99;background:var(--rose);color:#0a141f;padding:8px 16px;font-weight:700}
+.skip:focus{left:8px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+section{padding:96px 0;border-top:1px solid var(--line)}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+
+/* ---------- header ---------- */
+header{position:sticky;top:0;z-index:50;background:rgba(10,20,31,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:28px;height:62px}
+.brand{display:flex;align-items:baseline;gap:10px;font-family:var(--disp);font-weight:900;font-size:19px;letter-spacing:.02em;white-space:nowrap}
+.brand .mr{font-family:var(--mono);font-size:11px;color:var(--rose);border:1px solid var(--rose);padding:1px 7px;border-radius:2px;letter-spacing:.12em}
+.navlinks{display:flex;gap:24px;margin-left:auto}
+.navlinks a{font-family:var(--cond);font-size:15px;letter-spacing:.14em;color:var(--ink3);transition:color .2s}
+.navlinks a:hover{color:var(--ink)}
+.navcta{font-family:var(--mono);font-size:12.5px;font-weight:500;color:var(--ink);border:1px solid var(--line);padding:8px 16px;border-radius:3px;white-space:nowrap;transition:border-color .2s,color .2s}
+.navcta:hover{border-color:var(--rose);color:var(--rose2)}
+
+/* ---------- hero ---------- */
+.hero{padding:104px 0 88px;border-top:none;position:relative}
+.cross{position:absolute;width:15px;height:15px;pointer-events:none;opacity:.5}
+.cross::before,.cross::after{content:"";position:absolute;background:var(--cyan)}
+.cross::before{left:7px;top:0;width:1px;height:15px}
+.cross::after{top:7px;left:0;height:1px;width:15px}
+.cross.tl{top:26px;left:26px}.cross.tr{top:26px;right:26px}
+.cross.bl{bottom:26px;left:26px}.cross.br{bottom:26px;right:26px}
+.hero .wrap{display:grid;grid-template-columns:1.12fr .88fr;gap:56px;align-items:start}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.22em;color:var(--cyan);margin-bottom:22px}
+h1{font-family:var(--disp);font-weight:900;font-size:clamp(38px,4.6vw,58px);line-height:1.16;letter-spacing:.01em;margin-bottom:24px}
+h1 em{font-style:normal;color:var(--rose)}
+.lede{color:var(--ink2);font-size:17.5px;max-width:56ch;margin-bottom:34px}
+.lede strong{color:var(--ink);font-weight:700}
+.ctarow{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:30px}
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--disp);font-weight:700;font-size:15.5px;padding:13px 26px;border-radius:3px;transition:transform .15s,background .2s,border-color .2s}
+.btn:active{transform:translateY(1px)}
+.btn-p{background:var(--rose);color:#16060a}
+.btn-p:hover{background:var(--rose2)}
+.btn-g{border:1px solid var(--line);color:var(--ink)}
+.btn-g:hover{border-color:var(--cyan);color:var(--cyan)}
+.hero-status{font-family:var(--mono);font-size:12.5px;color:var(--ink3);display:flex;align-items:center;gap:10px}
+.led{width:7px;height:7px;border-radius:50%;background:var(--ok);display:inline-block}
+.led.warn{background:var(--warn)}
+.led.idle{background:var(--idle)}
+
+/* ---------- 图签 title block ---------- */
+.tblock{border:1px solid var(--line);background:var(--panel2);font-family:var(--mono)}
+.tblock .trow{display:grid;grid-template-columns:1fr 1fr}
+.tblock .cell{padding:13px 16px;border-bottom:1px solid var(--line);border-right:1px solid var(--line)}
+.tblock .cell:nth-child(2n){border-right:none}
+.tblock .cell:nth-last-child(-n+2){border-bottom:none}
+.tblock .k{font-size:10px;letter-spacing:.18em;color:var(--ink3);display:block;margin-bottom:3px}
+.tblock .v{font-size:13px;color:var(--ink)}
+.tblock .v.big{font-family:var(--disp);font-weight:900;font-size:21px;letter-spacing:.02em}
+.tblock .v.rose{color:var(--rose)}
+.tblock .foot{padding:10px 16px;border-top:1px solid var(--line);font-size:10.5px;letter-spacing:.14em;color:var(--ink3);display:flex;justify-content:space-between}
+.tblock .foot b{color:var(--cyan);font-weight:500}
+
+/* ---------- dimension label ---------- */
+.dim{display:flex;align-items:center;gap:14px;margin-bottom:14px;font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;color:var(--cyan)}
+.dim i{flex:1;height:1px;background:var(--cyan);opacity:.4;position:relative}
+.dim i::before,.dim i::after{content:"";position:absolute;top:-3px;width:1px;height:7px;background:var(--cyan);opacity:.7}
+.dim i::before{left:0}.dim i::after{right:0}
+h2{font-family:var(--disp);font-weight:900;font-size:clamp(27px,3.2vw,38px);line-height:1.25;margin-bottom:14px}
+h2 .huen{display:block;font-size:.42em;font-weight:500;font-family:var(--mono);letter-spacing:.16em;color:var(--ink3);margin-top:10px}
+.shead{margin-bottom:44px}
+
+/* ---------- metrics ---------- */
+.metrics{border:1px solid var(--line);background:var(--panel2);display:grid;grid-template-columns:repeat(6,1fr)}
+.metric{padding:26px 20px;border-right:1px solid var(--line);position:relative}
+.metric:last-child{border-right:none}
+.metric .n{font-family:var(--disp);font-weight:900;font-size:clamp(26px,2.6vw,38px);line-height:1;font-variant-numeric:tabular-nums}
+.metric .n small{font-size:.42em;font-weight:500;color:var(--ink2);margin-left:2px}
+.metric .l{font-family:var(--cond);font-size:13px;letter-spacing:.14em;color:var(--ink3);margin-top:9px}
+.metric .l b{color:var(--ink2);font-weight:500}
+.metric.hot .n{color:var(--rose)}
+
+/* ---------- BOM ---------- */
+.bom{border:1px solid var(--line);background:var(--panel2)}
+.bomhead,.bomrow{display:grid;grid-template-columns:64px 132px 1fr 96px 1.2fr;border-bottom:1px solid var(--line)}
+.bomhead{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;color:var(--ink3);background:var(--panel)}
+.bomrow:last-child{border-bottom:none}
+.bomrow:hover{background:rgba(148,196,228,.045)}
+.bomhead>div,.bomrow>div{padding:14px 18px;display:flex;align-items:center}
+.bom .no{font-family:var(--mono);font-size:12px;color:var(--ink3)}
+.bom .code{font-family:var(--mono);font-size:12.5px;letter-spacing:.08em;color:var(--cyan)}
+.bom .name{font-family:var(--disp);font-weight:700;font-size:16.5px}
+.bom .name small{display:block;font-family:var(--mono);font-weight:400;font-size:10.5px;letter-spacing:.16em;color:var(--ink3);margin-top:2px}
+.bom .qty{font-family:var(--disp);font-weight:900;font-size:24px;font-variant-numeric:tabular-nums;justify-content:flex-end}
+.bom .spec{font-size:13px;color:var(--ink3);line-height:1.6}
+.bom .total{background:var(--panel)}
+.bom .total .no{color:var(--rose)}
+.bom .total .name{font-size:17px}
+.bom .total .qty{color:var(--rose);font-size:30px}
+.bomnote{margin-top:14px;font-family:var(--mono);font-size:12px;color:var(--ink3)}
+.bomnote b{color:var(--ink2);font-weight:500}
+
+/* ---------- scenario cards ---------- */
+.scgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.scard{border:1px solid var(--line);background:var(--panel2);padding:22px 24px;position:relative;transition:border-color .2s}
+.scard:hover{border-color:rgba(148,196,228,.4)}
+.scard .top{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.scard .stamp{font-family:var(--mono);font-weight:700;font-size:13px;color:var(--cyan);border:1px solid var(--cyan);padding:2px 9px;border-radius:2px;letter-spacing:.1em}
+.scard .cat{font-family:var(--cond);font-size:12.5px;letter-spacing:.12em;color:var(--ink3);border:1px solid var(--line);padding:2px 9px;border-radius:2px}
+.scard .doc{margin-left:auto;font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--warn);border:1px dashed rgba(255,201,77,.45);padding:2px 8px;border-radius:2px}
+.scard h3{font-family:var(--disp);font-weight:800;font-size:18.5px;margin-bottom:14px}
+.scard .meta{display:grid;gap:6px;font-size:13.5px;color:var(--ink2)}
+.scard .meta b{font-family:var(--mono);font-weight:400;font-size:10.5px;letter-spacing:.16em;color:var(--ink3);margin-right:10px}
+.scard .meta em{font-style:normal;color:var(--ink)}
+.scnote{margin-top:22px;font-size:13.5px;color:var(--ink3);border-left:2px solid var(--warn);padding:4px 0 4px 16px;max-width:78ch}
+.scnote b{color:var(--warn);font-weight:500}
+
+/* ---------- themes ---------- */
+.thtable{border:1px solid var(--line);background:var(--panel2)}
+.thhead,.throw{display:grid;grid-template-columns:1.15fr 1.35fr 1fr .7fr;border-bottom:1px solid var(--line)}
+.thhead{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;color:var(--ink3);background:var(--panel)}
+.throw:last-child{border-bottom:none}
+.throw:hover{background:rgba(148,196,228,.045)}
+.thhead>div,.throw>div{padding:14px 18px;display:flex;align-items:center;font-size:13.5px}
+.throw .t{font-family:var(--disp);font-weight:700;font-size:15.5px;gap:8px}
+.throw .t i{font-style:normal;font-family:var(--mono);font-size:11px;color:var(--cyan);font-weight:400}
+.throw .q{color:var(--ink2)}
+.throw .m{color:var(--ink3);font-family:var(--mono);font-size:12.5px}
+.throw .d{color:var(--cyan);font-family:var(--mono);font-size:12px}
+
+/* ---------- timeline ---------- */
+.tline{position:relative;max-width:860px}
+.tline::before{content:"";position:absolute;left:81px;top:8px;bottom:8px;width:1px;background:var(--line)}
+.ty{display:grid;grid-template-columns:64px 34px 1fr;gap:0 0;position:relative;padding:0 0 40px 0}
+.ty:last-child{padding-bottom:0}
+.ty .yr{font-family:var(--mono);font-weight:700;font-size:21px;color:var(--ink);text-align:right;line-height:1.2;padding-top:1px}
+.ty .node{position:relative;display:flex;justify-content:center}
+.ty .node i{width:11px;height:11px;border-radius:50%;background:var(--bg);border:2px solid var(--cyan);margin-top:8px;z-index:1}
+.ty.pending .node i{border-style:dashed;border-color:var(--warn)}
+.ty.pending .yr{color:var(--warn)}
+.ty .box{padding-left:26px}
+.ty .box h3{font-family:var(--disp);font-weight:800;font-size:17px;margin-bottom:6px}
+.ty .box h3 .tag{font-family:var(--mono);font-weight:400;font-size:10.5px;letter-spacing:.12em;color:var(--warn);border:1px dashed rgba(255,201,77,.45);padding:1px 7px;border-radius:2px;margin-left:10px;vertical-align:2px}
+.ty .items{display:flex;flex-wrap:wrap;gap:7px}
+.ty .items span{font-family:var(--mono);font-size:12px;color:var(--ink2);border:1px solid var(--line);padding:3px 10px;border-radius:2px;background:var(--panel2)}
+.ty .items span i{font-style:normal;color:var(--ink3)}
+.tynote{margin-top:8px;font-size:12.5px;color:var(--ink3);max-width:64ch}
+
+/* ---------- roadmap ---------- */
+.rmap{border:1px solid var(--line);background:var(--panel2)}
+.rrow{display:grid;grid-template-columns:96px 1fr 132px 130px;border-bottom:1px solid var(--line)}
+.rrow:last-child{border-bottom:none}
+.rrow>div{padding:17px 20px;display:flex;align-items:center;gap:8px}
+.rrow .ph{font-family:var(--mono);font-weight:700;font-size:13px;color:var(--cyan);letter-spacing:.06em}
+.rrow .goal{font-family:var(--disp);font-weight:700;font-size:15.5px}
+.rrow .goal small{display:block;font-family:var(--body);font-weight:400;font-size:12.5px;color:var(--ink3);margin-top:2px}
+.chip{font-family:var(--mono);font-size:11px;letter-spacing:.14em;padding:3px 11px;border-radius:2px;justify-self:start}
+.chip.ok{color:var(--ok);border:1px solid rgba(63,185,80,.5)}
+.chip.warn{color:var(--warn);border:1px solid rgba(255,201,77,.5)}
+.chip.idle{color:var(--idle);border:1px solid rgba(92,111,132,.5)}
+.rrow .date{font-family:var(--mono);font-size:12.5px;color:var(--ink3);justify-content:flex-end}
+
+/* ---------- creed ---------- */
+.creed{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:56px}
+.ccol{border:1px solid var(--line);background:var(--panel2);padding:26px 28px}
+.ccol h3{font-family:var(--cond);font-size:15px;font-weight:600;letter-spacing:.2em;color:var(--ink3);margin-bottom:16px}
+.ccol.yes h3{color:var(--ok)}
+.ccol.no h3{color:var(--rose)}
+.ccol ul{list-style:none;display:grid;gap:10px}
+.ccol li{font-size:14.5px;color:var(--ink2);display:flex;gap:12px}
+.ccol li b{color:var(--ink);font-weight:700}
+.ccol .mk{font-family:var(--mono);font-weight:700}
+.ccol.yes .mk{color:var(--ok)}
+.ccol.no .mk{color:var(--rose)}
+.quote{border-left:2px solid var(--rose);padding:6px 0 6px 30px;max-width:760px}
+.quote p{font-family:var(--disp);font-weight:700;font-size:clamp(18px,2vw,22px);line-height:1.9;color:var(--ink)}
+.quote p em{font-style:normal;color:var(--rose)}
+.quote .who{margin-top:14px;font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:var(--ink3)}
+
+/* ---------- close & footer ---------- */
+.close{text-align:center;padding:110px 0}
+.close h2{font-size:clamp(30px,4vw,46px)}
+.close .ctarow{justify-content:center;margin-top:36px;margin-bottom:0}
+footer{border-top:1px solid var(--line);padding:30px 0 36px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;align-items:center;font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;color:var(--ink3)}
+footer a{color:var(--ink2);border-bottom:1px solid var(--line)}
+footer a:hover{color:var(--ink);border-color:var(--rose)}
+
+/* ---------- motion ---------- */
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+}
+
+/* ---------- responsive ---------- */
+@media (max-width:1020px){
+  .hero .wrap{grid-template-columns:1fr;gap:40px}
+  .metrics{grid-template-columns:repeat(3,1fr)}
+  .metric:nth-child(3){border-right:none}
+  .metric:nth-child(-n+3){border-bottom:1px solid var(--line)}
+  .bomhead,.bomrow{grid-template-columns:52px 1fr 82px 1.1fr}
+  .bom .code{display:none}
+  .thhead,.throw{grid-template-columns:1.1fr 1.25fr .85fr}
+  .thhead>div:last-child,.throw>div:last-child{display:none}
+}
+@media (max-width:860px){
+  .navlinks{display:none}
+  .scgrid{grid-template-columns:1fr}
+  .creed{grid-template-columns:1fr}
+  section{padding:72px 0}
+  .hero{padding:72px 0 60px}
+}
+@media (max-width:640px){
+  .wrap{padding:0 18px}
+  .bomhead,.bomrow{grid-template-columns:44px 1fr 70px}
+  .bom .spec{display:none}
+  .rrow{grid-template-columns:70px 1fr 96px}
+  .rrow .date{display:none}
+  .thhead,.throw{grid-template-columns:1fr}
+  .thhead{display:none}
+  .throw>div{padding:7px 18px}
+  .throw>div:first-child{padding-top:15px}
+  .throw>div:last-child{display:flex;padding-bottom:15px}
+  .throw{border-bottom:1px solid var(--line)}
+  .throw>div:last-child{border-bottom:none;display:none}
+  .throw .q::before{content:"核心问题 · ";font-family:var(--mono);font-size:10px;letter-spacing:.16em;color:var(--ink3)}
+  .throw .m::before{content:"代表方法 · ";font-family:var(--mono);font-size:10px;letter-spacing:.16em;color:var(--ink3)}
+  .tline::before{left:44px}
+  .ty{grid-template-columns:34px 26px 1fr}
+  .ty .yr{font-size:13px;padding-top:10px}
+  .ty .box{padding-left:16px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">跳到主要内容</a>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">机械浪漫 <span class="mr">MR</span></a>
+    <nav class="navlinks" aria-label="页内导航">
+      <a href="#bom">语料构成</a>
+      <a href="#scenarios">场景工作台</a>
+      <a href="#themes">研究主题</a>
+      <a href="#timeline">演化时间线</a>
+      <a href="#roadmap">路线图</a>
+    </nav>
+    <a class="navcta" href="https://github.com/allengaller/mechanic-romance" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" id="top">
+  <span class="cross tl" aria-hidden="true"></span><span class="cross tr" aria-hidden="true"></span>
+  <span class="cross bl" aria-hidden="true"></span><span class="cross br" aria-hidden="true"></span>
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">OPEN RESEARCH CORPUS · EMBODIED AI · ZH + EN</p>
+      <h1>机器没有浪漫，<br><em>研究机器的过程可以。</em></h1>
+      <p class="lede"><strong>机械浪漫</strong>是一个面向具身智能（Embodied AI）研究的开源语料库 + Demo 场景工作台——把冰冷的机械、数据与算法，组织成<strong>可被理解、可被复现、可被讨论</strong>的研究语言。论文在 arXiv，代码在 GitHub，笔记在 Notion——这里拒绝三座孤岛。</p>
+      <div class="ctarow">
+        <a class="btn btn-p" href="https://github.com/allengaller/mechanic-romance" target="_blank" rel="noopener noreferrer">浏览 GitHub 仓库</a>
+        <a class="btn btn-g" href="#scenarios">看 8 个场景 ↓</a>
+      </div>
+      <p class="hero-status"><span class="led" aria-hidden="true"></span>M0 · M1 已完成<span class="led warn" aria-hidden="true" style="margin-left:14px"></span>M2 场景定义进行中<span class="led idle" aria-hidden="true" style="margin-left:14px"></span>M3 实验复现待开始</p>
+    </div>
+    <figure class="tblock" aria-label="图纸标题栏">
+      <div class="trow">
+        <div class="cell" style="grid-column:1/-1"><span class="k">项目 PROJECT</span><span class="v big">机械浪漫 <span style="color:var(--rose)">Mechanic Romance</span></span></div>
+        <div class="cell"><span class="k">定位 ROLE</span><span class="v">研究语料库 + 场景工作台</span></div>
+        <div class="cell"><span class="k">领域 DOMAIN</span><span class="v">具身智能 Embodied AI</span></div>
+        <div class="cell"><span class="k">图号 DWG NO.</span><span class="v">MR-2026-001</span></div>
+        <div class="cell"><span class="k">版次 REV.</span><span class="v rose">M2 · 场景定义</span></div>
+        <div class="cell"><span class="k">比例 SCALE</span><span class="v">1 : 1（按 README 事实）</span></div>
+        <div class="cell"><span class="k">绘制 DRAWN</span><span class="v">Allen Galler（法喜）</span></div>
+        <div class="cell"><span class="k">日期 DATE</span><span class="v">2026-09-02</span></div>
+        <div class="cell"><span class="k">语言 LANG</span><span class="v">中文 + English</span></div>
+      </div>
+      <div class="foot"><span>DO NOT SCALE DRAWING</span><b>语料即图纸 · 场景即工序</b></div>
+    </figure>
+  </div>
+</section>
+
+<section id="bom">
+  <div class="wrap">
+    <div class="shead reveal">
+      <p class="dim"><i></i>SECTION 01 · 语料构成<i></i></p>
+      <h2>一张明细表，<span class="huen">BILL OF MATERIALS · 全库 67 篇</span></h2>
+      <p style="color:var(--ink2);max-width:66ch">每一篇笔记都是一张可引用的图纸：方法、硬件、仿真、概念，按同一套写作约定沉淀，按同一套引用格式标注来源。</p>
+    </div>
+    <div class="bom reveal" role="table" aria-label="语料构成明细表">
+      <div class="bomhead" role="row"><div>NO.</div><div class="code">代号 CODE</div><div>名称 ITEM</div><div style="justify-content:flex-end">数量 QTY</div><div>内容 SPEC</div></div>
+      <div class="bomrow" role="row"><div class="no">01</div><div class="code">METHODS</div><div class="name">方法笔记<small>LEARNING METHODS</small></div><div class="qty">10</div><div class="spec">IL / RL / DP / ACT / VLA / VLN / PPO / SAC / DAgger / BC</div></div>
+      <div class="bomrow" role="row"><div class="no">02</div><div class="code">HARDWARE</div><div class="name">硬件笔记<small>ROBOT HARDWARE</small></div><div class="qty">22</div><div class="spec">机械臂 / 人形 / 灵巧手 / 末端执行器 / 四足 / 传感器 / 计算（7 类）</div></div>
+      <div class="bomrow" role="row"><div class="no">03</div><div class="code">SIMULATION</div><div class="name">仿真笔记<small>SIMULATION</small></div><div class="qty">6</div><div class="spec">Isaac Lab / Habitat / MuJoCo / PyBullet / Genesis + Sim-to-Real</div></div>
+      <div class="bomrow" role="row"><div class="no">04</div><div class="code">CONCEPTS</div><div class="name">概念笔记<small>CONCEPTS</small></div><div class="qty">13</div><div class="spec">具身基础 / MDP / 感知 / 训练</div></div>
+      <div class="bomrow" role="row"><div class="no">05</div><div class="code">PAPERS</div><div class="name">论文笔记<small>PAPER NOTES</small></div><div class="qty">4</div><div class="spec">Diffusion Policy / ACT / RT-2 / OpenVLA</div></div>
+      <div class="bomrow" role="row"><div class="no">06</div><div class="code">DATASETS</div><div class="name">数据集<small>DATASETS</small></div><div class="qty">1</div><div class="spec">Open X-Embodiment 等</div></div>
+      <div class="bomrow" role="row"><div class="no">07</div><div class="code">BENCH</div><div class="name">评测基准<small>BENCHMARKS</small></div><div class="qty">5</div><div class="spec">操作 / VLA 评测等 5 个基准</div></div>
+      <div class="bomrow" role="row"><div class="no">08</div><div class="code">INDUSTRY</div><div class="name">公司图谱<small>INDUSTRY MAP</small></div><div class="qty">5</div><div class="spec">Figure AI 等海内外公司笔记</div></div>
+      <div class="bomrow" role="row"><div class="no">09</div><div class="code">SURVEYS</div><div class="name">综述<small>SURVEYS</small></div><div class="qty">1</div><div class="spec">领域综述精读</div></div>
+      <div class="bomrow total" role="row"><div class="no">Σ</div><div class="code">TOTAL</div><div class="name">语料合计<small>CORPUS SIZE</small></div><div class="qty">67</div><div class="spec">进度唯一事实源：docs/roadmap.md</div></div>
+    </div>
+    <p class="bomnote reveal">※ 统计同步自仓库 README（2026-09-02 版）；另有 <b>8 份 Demo 场景定义</b>与项目级文档不计入语料数。</p>
+  </div>
+</section>
+
+<section id="scenarios">
+  <div class="wrap">
+    <div class="shead reveal">
+      <p class="dim"><i></i>SECTION 02 · 场景工作台<i></i></p>
+      <h2>8 道工序，8 种浪漫。<span class="huen">SCENARIO WORKBENCH · 统一模板：任务 / 观测 / 动作 / 评估 / 硬件</span></h2>
+      <p style="color:var(--ink2);max-width:66ch">每个场景用同一张模板定义——可复现、可比较、可讲解。把抽象的 SOTA 数字，拆成说得清的任务与评估。</p>
+    </div>
+    <div class="scgrid">
+      <article class="scard reveal"><div class="top"><span class="stamp">OP-01</span><span class="cat">单臂 IL</span><span class="doc">设计文档</span></div><h3>扩散策略 · 桌面堆叠</h3><div class="meta"><div><b>METHOD</b><em>Diffusion Policy</em></div><div><b>演示形态</b>推方块到目标点</div></div></article>
+      <article class="scard reveal"><div class="top"><span class="stamp">OP-02</span><span class="cat">双手 IL</span><span class="doc">设计文档</span></div><h3>ACT · 双手叠衣</h3><div class="meta"><div><b>METHOD</b><em>Action Chunking Transformer</em></div><div><b>演示形态</b>双手叠毛巾</div></div></article>
+      <article class="scard reveal"><div class="top"><span class="stamp">OP-03</span><span class="cat">VLA</span><span class="doc">设计文档</span></div><h3>RT-2 · 自然语言指令分拣</h3><div class="meta"><div><b>METHOD</b><em>RT-2（VLM + 动作 token）</em></div><div><b>演示形态</b>听指令分拣</div></div></article>
+      <article class="scard reveal"><div class="top"><span class="stamp">OP-04</span><span class="cat">开源 VLA</span><span class="doc">设计文档</span></div><h3>OpenVLA · 7B 复现</h3><div class="meta"><div><b>METHOD</b><em>OpenVLA-7B + BridgeData</em></div><div><b>演示形态</b>桌面倒水</div></div></article>
+      <article class="scard reveal"><div class="top"><span class="stamp">OP-05</span><span class="cat">商用人形</span><span class="doc">设计文档</span></div><h3>Figure 02 + Helix · 端到端人形</h3><div class="meta"><div><b>METHOD</b><em>Helix（双系统 VLA）</em></div><div><b>演示形态</b>开冰箱拿可乐</div></div></article>
+      <article class="scard reveal"><div class="top"><span class="stamp">OP-06</span><span class="cat">RL</span><span class="doc">设计文档</span></div><h3>强化学习 · Franka 抓杯</h3><div class="meta"><div><b>METHOD</b><em>PPO + Isaac Lab</em></div><div><b>演示形态</b>仿真中学会抓杯</div></div></article>
+      <article class="scard reveal"><div class="top"><span class="stamp">OP-07</span><span class="cat">导航</span><span class="doc">设计文档</span></div><h3>视觉语言导航 · VLN-CE</h3><div class="meta"><div><b>METHOD</b><em>HAMT + Habitat</em></div><div><b>演示形态</b>3D 室内听指令导航</div></div></article>
+      <article class="scard reveal"><div class="top"><span class="stamp">OP-08</span><span class="cat">灵巧手</span><span class="doc">设计文档</span></div><h3>灵巧手 · 五指旋转立方体</h3><div class="meta"><div><b>METHOD</b><em>PPO + Allegro / LEAP</em></div><div><b>演示形态</b>立方体掌心旋转</div></div></article>
+    </div>
+    <p class="scnote reveal">※ 诚实标注：当前 8 个场景均为<b>设计文档</b>（状态见各场景 README），可跑的训练 / 评估脚本随路线图 M3「实验复现」逐步落地；此前请按各场景指向的官方实现复现。</p>
+  </div>
+</section>
+
+<section id="themes">
+  <div class="wrap">
+    <div class="shead reveal">
+      <p class="dim"><i></i>SECTION 03 · 研究主题<i></i></p>
+      <h2>8 大主题全覆盖。<span class="huen">RESEARCH THEMES · 从抓放到导航，从学习范式到 Sim-to-Real</span></h2>
+    </div>
+    <div class="thtable reveal" role="table" aria-label="八大研究主题">
+      <div class="thhead" role="row"><div>主题 THEME</div><div>核心问题 QUESTION</div><div>代表方法 METHODS</div><div>对应场景</div></div>
+      <div class="throw" role="row"><div class="t"><i>T1</i>单臂操作</div><div class="q">如何抓放物体？</div><div class="m">BC / DP / VLA</div><div class="d">OP-01 · 03 · 04 · 06</div></div>
+      <div class="throw" role="row"><div class="t"><i>T2</i>双手操作</div><div class="q">如何协调双臂？</div><div class="m">ACT / Mobile ALOHA</div><div class="d">OP-02</div></div>
+      <div class="throw" role="row"><div class="t"><i>T3</i>人形机器人</div><div class="q">通用身体如何决策？</div><div class="m">Helix / π₀ / GO-1</div><div class="d">OP-05</div></div>
+      <div class="throw" role="row"><div class="t"><i>T4</i>灵巧手</div><div class="q">5 指能做什么？</div><div class="m">PPO / DDEX / DexCap</div><div class="d">OP-08</div></div>
+      <div class="throw" role="row"><div class="t"><i>T5</i>导航</div><div class="q">如何听懂指令走路？</div><div class="m">HAMT / DUET / NaVid</div><div class="d">OP-07</div></div>
+      <div class="throw" role="row"><div class="t"><i>T6</i>基础模型</div><div class="q">一个模型统治一切？</div><div class="m">RT-2 / OpenVLA / π₀</div><div class="d">OP-03 · 04 · 05</div></div>
+      <div class="throw" role="row"><div class="t"><i>T7</i>学习范式</div><div class="q">演示 / 试错 / 纠错？</div><div class="m">IL / RL / DAgger</div><div class="d">跨 8 场景</div></div>
+      <div class="throw" role="row"><div class="t"><i>T8</i>Sim-to-Real</div><div class="q">仿真能迁到真机吗？</div><div class="m">域随机化 / 系统辨识</div><div class="d">跨 6 场景</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="timeline">
+  <div class="wrap">
+    <div class="shead reveal">
+      <p class="dim"><i></i>SECTION 04 · 方法演化<i></i></p>
+      <h2>从 RT-1 到今天，<span class="huen">ASSEMBLY TIMELINE · 2022 → 2026</span></h2>
+      <p style="color:var(--ink2);max-width:66ch">领域四年的演化主线，逐节点装配。2022–2024 条目均有论文或官方资料支撑；标注「待核实」的为前瞻推测。</p>
+    </div>
+    <div class="tline">
+      <div class="ty reveal"><div class="yr">2022</div><div class="node"><i aria-hidden="true"></i></div><div class="box"><h3>行为克隆起点</h3><div class="items"><span>RT-1 <i>· 行为克隆 + 7-DoF token</i></span></div></div></div>
+      <div class="ty reveal"><div class="yr">2023</div><div class="node"><i aria-hidden="true"></i></div><div class="box"><h3>VLA 时代开启</h3><div class="items"><span>RT-2 <i>· 首个 VLA</i></span><span>Diffusion Policy <i>· 多模态动作</i></span><span>Open X-Embodiment <i>· 22 机构</i></span><span>ACT <i>· 双手操作</i></span><span>HAMT <i>· VLN SOTA</i></span></div></div></div>
+      <div class="ty reveal"><div class="yr">2024</div><div class="node"><i aria-hidden="true"></i></div><div class="box"><h3>开源与泛化</h3><div class="items"><span>OpenVLA-7B <i>· 单卡可微调</i></span><span>π₀ <i>· Flow matching</i></span><span>Mobile ALOHA <i>· ACT + 底盘</i></span><span>DDEX <i>· DP + 灵巧手</i></span><span>Octo <i>· 开源通用策略</i></span></div></div></div>
+      <div class="ty pending reveal"><div class="yr">2025</div><div class="node"><i aria-hidden="true"></i></div><div class="box"><h3>通用基础模型<span class="tag">部分待核实</span></h3><div class="items"><span>Helix (Figure 02) <i>· 双系统 VLA</i></span><span>π₀.5 <i>· 跨环境泛化</i></span><span>GO-1 <i>· 跨本体基础模型</i></span><span>Helix 02 <i>· 多机协同（待核实）</i></span></div><p class="tynote">π₀.5 与 GO-1 条目沿用 README 时间线口径；「待核实」为按行业趋势的前瞻推测。</p></div></div>
+      <div class="ty pending reveal"><div class="yr">2026</div><div class="node"><i aria-hidden="true"></i></div><div class="box"><h3>量产人形<span class="tag">待核实</span></h3><div class="items"><span>GO-2 <i>· 量产人形</i></span><span>Helix 03 <i>· 通用基础模型</i></span></div><p class="tynote">按行业趋势的前瞻推测，暂未找到官方发布信息佐证。<b style="color:var(--cyan)">↑ 你在这里</b></p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="roadmap">
+  <div class="wrap">
+    <div class="shead reveal">
+      <p class="dim"><i></i>SECTION 05 · 研究路线<i></i></p>
+      <h2>五个里程碑。<span class="huen">ROADMAP · 进度以 docs/roadmap.md 为唯一事实源</span></h2>
+    </div>
+    <div class="rmap reveal">
+      <div class="rrow"><div class="ph">M0</div><div class="goal">骨架<small>建立语料库与 Demo 场景项目结构</small></div><div><span class="chip ok">完成</span></div><div class="date">2026-08-02</div></div>
+      <div class="rrow"><div class="ph">M1</div><div class="goal">语料沉淀<small>方法 / 硬件 / 仿真 / 概念 / 基准 / 行业，合计 67 篇</small></div><div><span class="chip ok">完成</span></div><div class="date">2026-08-05</div></div>
+      <div class="rrow"><div class="ph">M2</div><div class="goal">场景定义<small>8 大类 8 个场景定义；首个场景推进到最小可跑复现</small></div><div><span class="chip warn">进行中</span></div><div class="date">8 份定义已起草</div></div>
+      <div class="rrow"><div class="ph">M3</div><div class="goal">实验复现<small>复现 1 个基线方法并记录结果</small></div><div><span class="chip idle">待开始</span></div><div class="date">—</div></div>
+      <div class="rrow"><div class="ph">M4</div><div class="goal">阶段总结<small>输出阶段性研究报告 / Demo 视频</small></div><div><span class="chip idle">待开始</span></div><div class="date">—</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="creed">
+  <div class="wrap">
+    <div class="shead reveal">
+      <p class="dim"><i></i>SECTION 06 · 边界与信条<i></i></p>
+      <h2>它是什么，不是什么。<span class="huen">SCOPE & CREED</span></h2>
+    </div>
+    <div class="creed">
+      <div class="ccol yes reveal">
+        <h3>IS · 是什么</h3>
+        <ul>
+          <li><span class="mk">+</span><span><b>可检索的语料库</b>——论文方法不再散落各处</span></li>
+          <li><span class="mk">+</span><span><b>可讲解的场景工作台</b>——把 SOTA 数字拆成说得清的任务与评估</span></li>
+          <li><span class="mk">+</span><span><b>可回放的研究日志</b>——从选题到跑通的全过程</span></li>
+        </ul>
+      </div>
+      <div class="ccol no reveal">
+        <h3>IS NOT · 不是什么</h3>
+        <ul>
+          <li><span class="mk">−</span><span>不是<b>训练框架</b>——不重写 PyTorch / Isaac Lab</span></li>
+          <li><span class="mk">−</span><span>不是<b>仿真器</b>——不重写物理引擎</span></li>
+          <li><span class="mk">−</span><span>不是<b>教科书</b>——不写公式推导，只写「为什么」和「怎么用」</span></li>
+        </ul>
+      </div>
+    </div>
+    <blockquote class="quote reveal">
+      <p>把一篇论文读懂很容易，把它<em>讲给别人听</em>很难；把一个方法跑通很容易，把<em>为什么跑得通</em>讲清楚很难；把一项技术用起来很容易，把<em>它在整个领域的位置</em>看清楚很难。机械浪漫追求的不是「难」本身，而是<em>把难的东西组织得美</em>。</p>
+      <p class="who">—— 机械浪漫 · 项目精神</p>
+    </blockquote>
+  </div>
+</section>
+
+<section class="close" id="close">
+  <div class="wrap reveal">
+    <p class="eyebrow" style="margin-bottom:18px">MECHANIC ROMANCE · MR-2026-001</p>
+    <h2>机器没有浪漫，<br>但研究机器的人，<span style="color:var(--rose)">可以有。</span></h2>
+    <div class="ctarow">
+      <a class="btn btn-p" href="https://github.com/allengaller/mechanic-romance" target="_blank" rel="noopener noreferrer">在 GitHub 上读语料库</a>
+      <a class="btn btn-g" href="#top">回到图纸顶部 ↑</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>机械浪漫 Mechanic Romance</span>
+    <span>语料统计同步自 README · 2026-09-02</span>
+    <span>作者 Allen Galler（法喜）</span>
+    <a href="https://github.com/allengaller/mechanic-romance" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a href="https://allengaller.github.io" target="_blank" rel="noopener noreferrer">个人站</a>
+    <a href="mailto:allengaller@qq.com">Email</a>
+  </div>
+</footer>
+
+<script>
+(function(){
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in')});return;
+  }
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>

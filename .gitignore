@@ -64,3 +64,7 @@ data/processed/
 
 # ---- 工具元数据 ----
 .zcode/
+
+# ---- GTM 落地页（Meoo 发布）----
+GTM/.env
+GTM/dist/
