@@ -111,6 +111,8 @@ mechanic-romance/
 │   ├── notes/                     ← 阅读笔记
 │   └── experiments/               ← 实验记录
 │
+├── gtm/                    ← 发布与推广策略（GTM）
+│
 ├── 📖 docs/                ← 项目级文档
 │   ├── roadmap.md                 ← 研究路线图（进度唯一事实源）
 │   └── conventions.md             ← 写作约定
