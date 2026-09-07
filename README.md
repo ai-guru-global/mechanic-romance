@@ -142,16 +142,16 @@ mechanic-romance/
   │
 2025 ─ Helix (Figure 02) ───── 双系统 VLA（System 1 + System 2）
   │   π₀.₅ 升级 ────────────── 通用机器人基础模型
-  │   GO-1 (Generalist) ────── 跨本体 + 跨任务基础模型
-  │   Helix 02 ─────────────── 多机协同（待核实）
+  │   GO-1（智元 AgiBot）───── 通用具身基础模型（Genie Operator-1）
+  │   Figure 03 ────────────── 下一代人形整机（BotQ 量产线）
   │
-2026 ─ GO-2 / Helix 03 ────── 量产人形 + 通用基础模型（待核实）
+2026 ─ Helix 02 ───────────── 全身自主（System 0 + System 1，行走 + 灵巧操作）
         ↑ 你在这里 ↑
 ```
 
 > 详细笔记见 [`corpus/methods/`](corpus/methods/)
 >
-> ⚠️ 标注（待核实）的条目为按行业趋势的前瞻推测，暂未找到官方发布信息佐证；2022-2024 条目均有论文或官方资料支撑。
+> ℹ️ 2022-2026 条目均有官方来源支撑：Helix / Figure 03 / Helix 02 见 Figure 官方新闻（figure.ai/news），GO-1 见智元 AgiBot 官方发布（2025-03）；详细考证见 [`corpus/industry/humanoid-overseas/figure-ai.md`](corpus/industry/humanoid-overseas/figure-ai.md)。
 
 ---
 
@@ -239,6 +239,11 @@ git clone https://github.com/real-stanford/diffusion_policy.git
 ---
 
 ## 📜 引用与致谢
+
+### 许可
+
+- 本仓库语料笔记与场景文档**暂未设置开源许可证**（默认保留所有权利）：可自由阅读与链接；转载 / 修改 / 再分发请先开 issue 联系作者。正式 LICENSE 将在社区公开推广前补充（见 [gtm/README.md 可信度门禁](gtm/README.md#可信度门禁)）。
+- 所引用第三方论文、数据集与图片的版权归原作者所有，本仓库仅作说明性引用，均标注来源与访问日期。
 
 ### 引用
 

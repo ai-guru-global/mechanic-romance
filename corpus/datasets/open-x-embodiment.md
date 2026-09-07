@@ -63,6 +63,7 @@ episode = {
 - [`../concepts/foundations/embodiment.md`](../concepts/foundations/embodiment.md)
 - [`../concepts/mdp/action-space.md`](../concepts/mdp/action-space.md)
 
-## 论文
+## 参考
 
-- *RT-X: Open Large-Scale Study of Generalist Robots*, 2023.（arXiv:2310.08864）
+- *Open X-Embodiment: Robotic Learning Datasets and RT-X Models*（Open X-Embodiment Collaboration），ICRA 2024.（论文：https://arxiv.org/abs/2310.08864，访问于 2026-09-07）
+- 项目主页与数据下载：https://robotics-transformer-x.github.io/（访问于 2026-09-07）

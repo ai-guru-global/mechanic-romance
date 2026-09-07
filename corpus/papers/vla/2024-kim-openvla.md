@@ -223,6 +223,14 @@ OpenVLA 之于 VLA，相当于 LLaMA 之于 LLM——它没有改变范式，但
 - [`../../methods/behavioral-cloning.md`](../../methods/behavioral-cloning.md) — OpenVLA 训练本质是 token 分类 BC
 - [`../../datasets/open-x-embodiment.md`](../../datasets/open-x-embodiment.md) — OpenVLA 的训练数据
 - [`2023-brohan-rt2.md`](2023-brohan-rt2.md) — 闭源前辈，OpenVLA 直接对标
-- [`../surveys/../../surveys/2023-firoozi-foundation-models-survey.md`](../../surveys/2023-firoozi-foundation-models-survey.md) — 综述中的 VLA 章节
+- [`../../surveys/2023-firoozi-foundation-models-survey.md`](../../surveys/2023-firoozi-foundation-models-survey.md) — 综述中的 VLA 章节
 - [`../diffusion-policy/2023-chi-diffusion-policy.md`](../diffusion-policy/2023-chi-diffusion-policy.md) — OpenVLA 的弱项（精细多模态）由 DP 补
 - [`../imitation-learning/2023-zhao-act.md`](../imitation-learning/2023-zhao-act.md) — ACT 的动作分块思想可改进 OpenVLA
+
+---
+
+## 参考
+
+- 论文：*OpenVLA: An Open-Source Vision-Language-Action Model*（来源：https://arxiv.org/abs/2406.09246，访问于 2026-09-07）
+- 项目主页：https://openvla.github.io/（访问于 2026-09-07）
+- 代码：https://github.com/openvla/openvla（访问于 2026-09-07）

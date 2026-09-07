@@ -195,7 +195,7 @@ config.sim_config.agent.sensor_specifications = [rgb_spec, depth_spec, wrist_rgb
 
 ---
 
-## 9. 资源与社区
+## 9. 参考与资源
 
 | 资源 | 链接 |
 | --- | --- |

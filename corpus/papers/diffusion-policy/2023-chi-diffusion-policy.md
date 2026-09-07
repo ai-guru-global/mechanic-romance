@@ -227,3 +227,11 @@ Diffusion Policy 是我读过的**工程价值最高的 manipulation 论文之�
 - [`../vla/2023-brohan-rt2.md`](../vla/2023-brohan-rt2.md) — DP 与 VLA 的两条主流路线对比
 - [`../vla/2024-kim-openvla.md`](../vla/2024-kim-openvla.md) — DP 在精细任务上领先 OpenVLA 的根源
 - [`../../hardware/arms/franka-panda.md`](../../hardware/arms/franka-panda.md) — DP 真机验证平台
+
+---
+
+## 参考
+
+- 论文：*Diffusion Policy: Visuomotor Policy Learning via Action Diffusion*，RSS 2023（来源：https://arxiv.org/abs/2303.04137，访问于 2026-09-07）
+- 项目主页：https://diffusion-policy.cs.columbia.edu/（访问于 2026-09-07）
+- 代码：https://github.com/real-stanford/diffusion_policy（访问于 2026-09-07）

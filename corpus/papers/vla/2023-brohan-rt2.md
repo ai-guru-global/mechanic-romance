@@ -241,4 +241,11 @@ RT-2 是**具身智能的 GPT-3 时刻**——它没有发明任何全新算法�
 - [`../../concepts/foundations/embodied-ai.md`](../../concepts/foundations/embodied-ai.md) — 具身智能的定义
 - [`../../datasets/open-x-embodiment.md`](../../datasets/open-x-embodiment.md) — RT-2 之后跨本体的延伸
 - [`2024-kim-openvla.md`](2024-kim-openvla.md) — RT-2 思想的开源复刻与平民化
-- [`../surveys/../../surveys/2023-firoozi-foundation-models-survey.md`](../../surveys/2023-firoozi-foundation-models-survey.md) — 综述中的 VLA 章节
+- [`../../surveys/2023-firoozi-foundation-models-survey.md`](../../surveys/2023-firoozi-foundation-models-survey.md) — 综述中的 VLA 章节
+
+---
+
+## 参考
+
+- 论文：*RT-2: Vision-Language-Action Models Transfer Web-Scale Knowledge to Robotic Control*，CoRL 2023（来源：https://arxiv.org/abs/2307.15818，访问于 2026-09-07）
+- 项目主页：https://robotics-transformer2.github.io/（访问于 2026-09-07）

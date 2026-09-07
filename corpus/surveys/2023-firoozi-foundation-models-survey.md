@@ -258,3 +258,10 @@ OXE 数据虽然跨 22 本体，但综述承认**形态相近时才真正泛化*
 - [`../concepts/foundations/embodiment.md`](../concepts/foundations/embodiment.md) — 跨本体泛化的概念基础
 - [`../datasets/open-x-embodiment.md`](../datasets/open-x-embodiment.md) — 数据基石（综述 §5）
 - [`../papers/vla/2023-brohan-rt2.md`](../papers/vla/2023-brohan-rt2.md) / [`../papers/vla/2024-kim-openvla.md`](../papers/vla/2024-kim-openvla.md) / [`../papers/diffusion-policy/2023-chi-diffusion-policy.md`](../papers/diffusion-policy/2023-chi-diffusion-policy.md) / [`../papers/imitation-learning/2023-zhao-act.md`](../papers/imitation-learning/2023-zhao-act.md) — 综述引用的代表论文笔记
+
+---
+
+## 参考
+
+- 论文：*Foundation Models for Generalist Robots: A Survey*（来源：https://arxiv.org/abs/2312.07843，访问于 2026-09-07）
+- 项目主页：https://generalerobots.github.io/（访问于 2026-09-07）

@@ -234,3 +234,11 @@ ACT 是一篇**"简单到极致、却极其有效"**的论文。它的核心 ide
 - [`../diffusion-policy/2023-chi-diffusion-policy.md`](../diffusion-policy/2023-chi-diffusion-policy.md) — 同年并发、思路互补（多模态动作建模的两条路）
 - [`../vla/2024-kim-openvla.md`](../vla/2024-kim-openvla.md) — OpenVLA 借鉴 ACT 的 chunk 思想
 - [`../../hardware/arms/ur5e.md`](../../hardware/arms/ur5e.md) — 双臂任务的另一常用平台
+
+---
+
+## 参考
+
+- 论文：*Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware*，RSS 2023（来源：https://arxiv.org/abs/2304.13705，访问于 2026-09-07）
+- 项目主页（ALOHA）：https://tonyzhaozh.github.io/aloha/（访问于 2026-09-07）
+- 代码（ACT 训练栈）：https://github.com/MarkFzp/act-plus-plus（访问于 2026-09-07）
