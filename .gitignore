@@ -64,6 +64,7 @@ data/processed/
 
 # ---- 工具元数据 ----
 .zcode/
+.qoder/
 
 # ---- GTM 落地页（Meoo 发布）----
 GTM/.env
