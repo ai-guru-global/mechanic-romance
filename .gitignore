@@ -65,6 +65,8 @@ data/processed/
 # ---- 工具元数据 ----
 .zcode/
 .qoder/
+# 某未知工具会把含真实密钥的 hook-state/*.source 写进此目录，曾被误提交致推送被 GitHub 拦截
+.mimosa/
 
 # ---- GTM 落地页（Meoo 发布）----
 GTM/.env
